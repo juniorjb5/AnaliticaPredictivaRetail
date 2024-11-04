@@ -75,6 +75,7 @@ background-size: cover
 # Shinny en la analítica predictiva
 
 
+[.orange[(Link App)]](https://juniorjb5.shinyapps.io/Adidas/)
 
 
 ]

@@ -1,4 +1,13 @@
+#
+# This is a Shiny web application. You can run the application by clicking
+# the 'Run App' button above.
+#
+# Find out more about building applications with Shiny here:
+#
+#    http://shiny.rstudio.com/
+#
 
+library(shiny)
 
 # Cargar librerías necesarias
 library(shiny)
@@ -14,9 +23,9 @@ library(plotly)
 
 # Cargar los datos
 adidas_data <- read_excel("Adidas.xlsx", col_types = c("text", 
-                                                  "date", "text", "text", "text", "text", 
-                                                  "numeric", "numeric", "numeric", "numeric", 
-                                                  "numeric", "text"))
+                                                       "date", "text", "text", "text", "text", 
+                                                       "numeric", "numeric", "numeric", "numeric", 
+                                                       "numeric", "text"))
 #View(adidas_data)
 
 
@@ -127,48 +136,48 @@ server <- function(input, output) {
       theme_minimal() + labs(x = input$cat_variable, y = "Frecuencia")
   })
   
-
+  
   observeEvent(input$filtro, {  
-  
-  output$SEMplot <- renderPlot({
     
-    plotdata<-adidas_data %>%
-    filter(State == input$Estado) %>%
-    group_by(Product,retailer) %>% 
-    summarize(n = n(),
-              mean = mean(.data[[input$variable1]]),  # Utiliza .data para acceder a input$variable1
-              sd = sd(.data[[input$variable1]]),
-              se = sd / sqrt(n),
-              .groups = 'drop') 
-  
-    pd <- position_dodge(0.2)
-    
-    ggplot(plotdata, 
-           aes(x = factor(Product), 
-               y = mean, 
-               group=retailer, 
-               color=retailer)) +
-      geom_point(position=pd, 
-                 size = 3) +
-      geom_line(position = pd, 
-                size = 1) +
-      geom_errorbar(aes(ymin = mean - se, 
-                        ymax = mean + se), 
-                    width = .1, 
-                    position = pd, 
-                    size = 1) +
-      scale_y_continuous(label = scales::dollar) +
-      scale_color_brewer(palette="Set1") +
-      theme_minimal() +
-      labs(title = "Promedios por Productos and Retailers",
-           subtitle = "(promedio +/- error estándar)",
-           x = "", 
-           y = "",
-           color = "Retailer")
-    
-    
+    output$SEMplot <- renderPlot({
+      
+      plotdata<-adidas_data %>%
+        filter(State == input$Estado) %>%
+        group_by(Product,retailer) %>% 
+        summarize(n = n(),
+                  mean = mean(.data[[input$variable1]]),  # Utiliza .data para acceder a input$variable1
+                  sd = sd(.data[[input$variable1]]),
+                  se = sd / sqrt(n),
+                  .groups = 'drop') 
+      
+      pd <- position_dodge(0.2)
+      
+      ggplot(plotdata, 
+             aes(x = factor(Product), 
+                 y = mean, 
+                 group=retailer, 
+                 color=retailer)) +
+        geom_point(position=pd, 
+                   size = 3) +
+        geom_line(position = pd, 
+                  size = 1) +
+        geom_errorbar(aes(ymin = mean - se, 
+                          ymax = mean + se), 
+                      width = .1, 
+                      position = pd, 
+                      size = 1) +
+        scale_y_continuous(label = scales::dollar) +
+        scale_color_brewer(palette="Set1") +
+        theme_minimal() +
+        labs(title = "Promedios por Productos and Retailers",
+             subtitle = "(promedio +/- error estándar)",
+             x = "", 
+             y = "",
+             color = "Retailer")
+      
+      
     })
-  
+    
   })
   
   
@@ -195,10 +204,10 @@ server <- function(input, output) {
   
   output$regresionPlot <- renderPlotly({
     
-        relacion1<-ggplot(adidas_data, 
-                     aes(x = price_per_unit     , 
-                         y = operating_profit, 
-                         color = retailer)) +
+    relacion1<-ggplot(adidas_data, 
+                      aes(x = price_per_unit     , 
+                          y = operating_profit, 
+                          color = retailer)) +
       geom_point(size = 3, 
                  alpha = .6) +
       labs(title = "Relación entre Operating profit y Price per Unit - Retailer")
@@ -212,9 +221,9 @@ server <- function(input, output) {
   output$regresionPlot2 <- renderPlotly({
     
     relacion2<-ggplot(adidas_data, 
-                     aes(x = units_sold, 
-                         y = operating_profit, 
-                         color = retailer)) +
+                      aes(x = units_sold, 
+                          y = operating_profit, 
+                          color = retailer)) +
       geom_point(size = 3, 
                  alpha = .6) +
       labs(title = "Relación entre Operating profit y Units Sold - Retailer")
@@ -228,9 +237,9 @@ server <- function(input, output) {
   output$regresionPlot3 <- renderPlotly({
     
     relacion3<-ggplot(adidas_data, 
-                     aes(x = price_per_unit, 
-                         y = operating_profit, 
-                         color = sales_method)) +
+                      aes(x = price_per_unit, 
+                          y = operating_profit, 
+                          color = sales_method)) +
       geom_point(size = 3, 
                  alpha = .6) +
       labs(title = "Relación entre Operating profit y Price per Unit - Sales Method")
@@ -243,9 +252,9 @@ server <- function(input, output) {
   output$regresionPlot4 <- renderPlotly({
     
     relacion4<-ggplot(adidas_data, 
-                     aes(x = units_sold, 
-                         y = operating_profit, 
-                         color = sales_method)) +
+                      aes(x = units_sold, 
+                          y = operating_profit, 
+                          color = sales_method)) +
       geom_point(size = 3, 
                  alpha = .6) +
       labs(title = "Relación entre Operating profit y Units Sold - Sales Method")
@@ -260,21 +269,21 @@ server <- function(input, output) {
     plot(modelo$residuals, main = "Residuos del Modelo", ylab = "Residuos", xlab = "Índice", col = "blue")
     abline(h = 0, col = "red", lty = 2)
   })
-
+  
   
   
   output$Supuestos1 <- renderPrint({
     shapiro.test(modelo$residuals[1:5000])
     
-   
+    
   })
   
   output$Supuestos2 <- renderPrint({
-  library(lmtest)
+    library(lmtest)
     bptest(modelo)
   })
   
-    
+  
   # Predicción
   observeEvent(input$predictBtn, {
     new_data <- data.frame(
@@ -286,13 +295,13 @@ server <- function(input, output) {
     
     prediction <- predict(modelo, newdata = new_data, interval = "prediction")
     
-      output$predictionResult <- renderPrint({
+    output$predictionResult <- renderPrint({
       print(paste("La predicción de ventas totales es: $", round(prediction[1], 2)))
       
-        
+      
       print(paste("El intervalo de confianza para la predicción es:", round(prediction[2], 2), " - ", round(prediction[3], 2), "con una confianza del 95%"))
       
-          })
+    })
   })
 }
 

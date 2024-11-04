@@ -1,0 +1,12 @@
+name: Adidas
+title: Adidas
+username: juniorjb5
+account: juniorjb5
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13228933
+bundleId: 9314518
+url: https://juniorjb5.shinyapps.io/Adidas/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE

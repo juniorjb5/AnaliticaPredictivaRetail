@@ -1,0 +1,13 @@
+name: AnaliticaPredictivaRetail
+title: AnaliticaPredictivaRetail
+username: juniorjb5
+account: juniorjb5
+server: shinyapps.io
+hostUrl: https://api.shinyapps.io/v1
+appId: 13228835
+bundleId: 9314490
+url: https://juniorjb5.shinyapps.io/AnaliticaPredictivaRetail/
+version: 1
+asMultiple: FALSE
+asStatic: FALSE
+ignoredFiles: 01-Intro.Rmd|02-Datos.Rmd|03-R.Rmd|04-Metodologias.Rmd|05-RegresionLineal.Rmd|06-Caso.Rmd|AnaliticaPredictivaRetail.html|AnaliticaPredictivaRetail.Rmd|cols.css|default.css|Divipola_Dpto.xlsx|rladies-fonts-spc.css|rladies-fonts.css|rladies-spc.css|rladies.css|SubirGithub.R|sydney.css|tutorial/raw_adelie.csv|tutorial/tour-of-the-tidyverse.nb.html|tutorial/tour-of-the-tidyverse.Rmd|Clase_1_files|ClasePrueba|images|tour-of-the-tidyverse_files
