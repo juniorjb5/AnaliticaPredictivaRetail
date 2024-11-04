@@ -141,66 +141,11 @@ El análisis de regresión se relaciona en gran medida con la estimación o pred
 
 > Las desviaciones de las observaciones $y_i$ de la $E(Y|X=x)$ se tienen en cuenta adicionando un error aleatorio $u_i$ al siguiente modelo:
 
-.font180[$$y_i = \beta_0 + \beta_1 x_i + u_i$$]
+.font180[$$y_i = \beta_0 + \beta_1 x_i + e_i$$]
 
 
 ---
 
-# Ejemplo
-
-Estos datos se refieren a una tienda de retail que atiende a una población total de 60 clientes, organizados en función de su ingreso semanal $(X)$ y su consumo semanal en la tienda $(Y)$, en dólares. Los 60 clientes se dividen en 10 grupos de ingresos (de 80 dólares a 260), y para cada grupo de ingresos, se muestra cuánto consume semanalmente cada cliente en promedio. Por consiguiente, hay 10 niveles de $X$ y los correspondientes valores $Y$ para cada nivel de ingreso; así, se representan 10 subpoblaciones de consumo $Y$ en función del ingreso $X$.
-
-
-.center[
-
-<img src="images/ejm1.jpg" width="70%"/>
-
-]
-
-
----
-
-# Ejemplo
-
-> En total hay 10 valores medios para las 10 subpoblaciones de Y. A estos valores medios se les llama valores esperados condicionales: $E(Y|X)$.
-
-<br>
-
-.pull-left[
-
-Es importante distinguir entre los valores esperados condicionales y el valor esperado incondicional: $E(Y)$.
-
-
-$$E(Y|X) \neq E(Y)$$
-
-
-
-Si sumamos los consumos semanales de los 60 clientes que forman la población y dividimos este número entre 60, obtendremos la cantidad de 121.20 dólares (7272/60), que es el .orange[**valor de la media incondicional**], o esperada, del consumo semanal, $E(Y)$.
-
-]
-
-.pull-right[
-
-.center[
-
-<img src="https://media.giphy.com/media/hv53DaYcXWe3nRbR1A/giphy.gif" width="70%"/>
-
-]
-
-]
-
-
----
-
-<br><br>
-
-<img src="images/ejm2.jpg" width="90%"/>
-
-### Esta figura muestra que para cada X (es decir, el nivel de ingresos) existe una población de valores Y (consumo semanal) que se distribuyen alrededor de la media (condicional) de dichos valores Y.
-
-
-
----
 
 
 name: MCO
@@ -352,7 +297,7 @@ summary(modelo1)
 .font110[**¿Cómo se interpreta esta ecuación?**
 ]]
 
-.orange[$$\hat{Ventas} = 29.59 + -0.04 Tamaño$$]
+.orange[$$\hat{Ventas} = 29.59 - 0.04 Tamaño$$]
 
 
 - En este caso, el intercepto representa un .orange[**valor de ajuste**] que simplemente ayuda a formar la ecuación de la recta de regresión, pero no necesariamente tiene una interpretación.
@@ -528,27 +473,9 @@ $H_1$: $\beta_1 \neq 0$ (hay una relación entre X e Y)
 
 ---
 
-## Estadístico de prueba
 
-Un estadístico de prueba es una función de los datos de la muestra que se utiliza para probar la hipótesis nula.
-
-En el modelo lineal simple, el estadístico de prueba para probar la hipótesis nula:
-
-
-$H_0: \beta_1 = \beta_{HipNula}$ es: 
-
-
-$$t = \frac{\hat{\beta}_1 - \beta_{HipNula}}{ee(\hat{\beta}_1)}$$
-
-donde,
-
-* $\hat{\beta}_1$ es el estimador de máxima verosimilitud de $\beta_1$
-
-* $ee(\hat{\beta}_1)$ es el error estándar de $\hat{\beta}1$
-
-* $\beta_{HipNula}$ es el valor especificado en la hipótesis nula
-
----
+<br>
+<br>
 
 
 .pull-left[
@@ -561,9 +488,6 @@ El valor p es la probabilidad de obtener un valor del estadístico de prueba tan
 
 .orange[Si el valor p es menor que el nivel de significancia ] $\alpha$ .orange[rechazamos la hipótesis nula.]
 
-## Regla $2t$
-
-Si el número de grados de libertad es 20 o más, y si $\alpha$, el nivel de significancia, se fija en 0.05, se rechaza la hipótesis nula $\beta_1 = 0$ si el valor de $t = \hat{\beta_1}/ee(\hat{\beta_1})$ es superior a 2 en valor absoluto.
 
 ]
 
@@ -578,7 +502,7 @@ Si el número de grados de libertad es 20 o más, y si $\alpha$, el nivel de sig
 
 - En caso contrario, no podemos rechazar la hipótesis nula.
 
-----
+
 
 
 
@@ -721,35 +645,18 @@ $$\hat{Y}_0 \pm t_{\alpha/2,n-2} \cdot \hat{\sigma} \sqrt{1 + \frac{1}{n} + \fra
 
 ---
 
-# Predicción
-
-## Intervalo de confianza para la media
-
-Un intervalo de confianza para la media de $Y$ está dado por:
-
-$$\hat{Y}_0 \pm t_{\alpha/2,n-2} \cdot \hat{\sigma} \sqrt{\frac{1}{n} + \frac{(x_0-\bar{x})^2}{\sum_{i=1}^n (x_i - \bar{x})^2}}$$
-
-
-.orange[**Intervalo de predicción media:**] Se utiliza cuando la ecuación de regresión se emplea para predecir el valor medio de Y para una X dada.
-
-
-.orange[**Ejemplo:**] Se puede usar un intervalo de confianza para estimar el salario
-medio de todos los ejecutivos en la industria minorista con base en sus años de experiencia.
-
-
-
----
-
 
 
 # En R...
 
 
-> .orange[**Para calcular el intervalo de confianza para la predicción,**] utilizamos la función `predict()` con el argumento `interval = "prediction"` y especificamos el nivel de confianza deseado con el argumento `level = 0.95`. Esto nos da tres columnas en la salida: la predicción puntual, el límite inferior del intervalo de confianza y el límite superior del intervalo de confianza.
+<br>
 
 ----
 
-> .orange[**Para calcular el intervalo de confianza para la predicción media,**] utilizamos la función `predict()` con el argumento `interval = "confidence"` y especificamos el nivel de confianza deseado con el argumento `level = 0.95`. Esto nos da tres columnas en la salida: la predicción puntual.
+> .orange[**Para calcular el intervalo de confianza para la predicción,**] utilizamos la función `predict()` con el argumento `interval = "prediction"` y especificamos el nivel de confianza deseado con el argumento `level = 0.95`. Esto nos da tres columnas en la salida: la predicción puntual, el límite inferior del intervalo de confianza y el límite superior del intervalo de confianza.
+
+----
 
 
 
@@ -777,20 +684,14 @@ newdata <- data.frame(product_size = seq(from = min(retail_data$product_size), t
 # Calcular la predicción y el intervalo de confianza para la predicción
 pred <- predict(model, newdata = newdata, interval = "prediction", level = 0.95)
 
-# Calcular la predicción media y el intervalo de confianza para la predicción media
-pred_mean <- predict(model, newdata = newdata, interval = "confidence", level = 0.95)
 
 # Graficar los resultados
 plot(retail_data$product_size, retail_data$sales_performance, pch = 16, xlab = "Tamaño", ylab = "Ventas")
 lines(newdata$product_size, pred[, 1], lwd = 2, col = "blue")
 lines(newdata$product_size, pred[, 2], lwd = 2, col = "red", lty = 2)
 lines(newdata$product_size, pred[, 3], lwd = 2, col = "red", lty = 2)
-lines(newdata$product_size, pred_mean[, 1], lwd = 2, col = "green")
-lines(newdata$product_size, pred_mean[, 2], lwd = 2, col = "orange", lty = 2)
-lines(newdata$product_size, pred_mean[, 3], lwd = 2, col = "orange", lty = 2)
-legend("topright", legend = c("Predicción", "Intervalo de confianza para la predicción",
-                              "Predicción media", "Intervalo de confianza para la predicción media"),
-       lty = c(1, 2, 1, 2), col = c("blue", "red", "green", "orange"), bty = "n", cex = 0.8)
+legend("topright", legend = c("Predicción", "Intervalo de confianza para la predicción"),
+       lty = c(1, 2, 1, 2), col = c("blue", "red"), bty = "n", cex = 0.8)
 
 ```
 
@@ -813,20 +714,14 @@ newdata <- data.frame(product_size = seq(from = min(retail_data$product_size), t
 # Calcular la predicción y el intervalo de confianza para la predicción
 pred <- predict(model, newdata = newdata, interval = "prediction", level = 0.95)
 
-# Calcular la predicción media y el intervalo de confianza para la predicción media
-pred_mean <- predict(model, newdata = newdata, interval = "confidence", level = 0.95)
 
 # Graficar los resultados
 plot(retail_data$product_size, retail_data$sales_performance, pch = 16, xlab = "Tamaño", ylab = "Ventas")
 lines(newdata$product_size, pred[, 1], lwd = 2, col = "blue")
 lines(newdata$product_size, pred[, 2], lwd = 2, col = "red", lty = 2)
 lines(newdata$product_size, pred[, 3], lwd = 2, col = "red", lty = 2)
-lines(newdata$product_size, pred_mean[, 1], lwd = 2, col = "green")
-lines(newdata$product_size, pred_mean[, 2], lwd = 2, col = "orange", lty = 2)
-lines(newdata$product_size, pred_mean[, 3], lwd = 2, col = "orange", lty = 2)
-legend("topright", legend = c("Predicción", "Intervalo de confianza para la predicción",
-                              "Predicción media", "Intervalo de confianza para la predicción media"),
-       lty = c(1, 2, 1, 2), col = c("blue", "red", "green", "orange"), bty = "n", cex = 0.8)
+legend("topright", legend = c("Predicción", "Intervalo de confianza para la predicción"),
+       lty = c(1, 2, 1, 2), col = c("blue", "red"), bty = "n", cex = 0.8)
 
 ```
 
@@ -835,29 +730,6 @@ legend("topright", legend = c("Predicción", "Intervalo de confianza para la pre
 ---
 
 
-
-
-# Diagnóstico y evaluación del modelo
-
-- La evaluación del modelo incluye la comprobación de las suposiciones de los residuos.
-
-- Si los residuos no siguen una distribución normal o si hay patrones en los residuos, entonces es posible que el modelo no sea apropiado para realizar inferencias.
-
-- También se pueden utilizar medidas como $R^2$ o el error cuadrático medio para evaluar la calidad del ajuste del modelo.
-
-### En General,
-
-
-- La forma matricial del modelo lineal múltiple es una herramienta poderosa para el análisis y la resolución de problemas de regresión.
-
-- La interpretación de los coeficientes permite entender la relación entre las variables.
-
-- La evaluación del modelo es esencial para verificar su validez y utilidad en la toma de decisiones.
-
-
-
-
----
 
 # Validación de condiciones para la regresión múltiple lineal
 
@@ -890,27 +762,22 @@ plot(retail_data_quant$product_size, retail_data_quant$sales_performance,
 > **Distribución normal de los residuos:**
 
 
-Tanto el análisis gráfico como es test de hipótesis confirman la normalidad.
+<br>
+<br>
+
 
 .pull-left[
 
-```{r, warning=FALSE, message=FALSE, eval=TRUE, echo=TRUE, fig.height=4}
+> H0: Normalidad
 
-qqnorm(model$residuals)
-qqline(model$residuals)
+> H1: No Normalidad
 
-
-```
 
 ]
 
 
 .pull-right[
 
-
-> H0: Normalidad
-
-> H1: No Normalidad
 
 
 ```{r, warning=FALSE, message=FALSE, eval=TRUE, echo=TRUE, fig.height=2}
@@ -930,15 +797,13 @@ shapiro.test(model$residuals)
 
 > **Variabilidad constante de los residuos (homocedasticidad):**
 
+<br>
+<br>
 
 .pull-left[
 
-Al representar los residuos frente a los valores ajustados por el modelo, los primeros se tienen que distribuir de forma aleatoria en torno a cero, manteniendo aproximadamente la misma variabilidad a lo largo del eje X. 
 
 
-Si se observa algún patrón específico, por ejemplo forma cónica o mayor dispersión en los extremos, significa que la variabilidad es dependiente del valor ajustado y por lo tanto no hay homocedasticidad.
-
-<br>
 
 > H0: Varianza Constante
 
@@ -950,47 +815,18 @@ Si se observa algún patrón específico, por ejemplo forma cónica o mayor disp
 
 .pull-right[
 
-```{r, warning=FALSE, message=FALSE, eval=FALSE, echo=TRUE, fig.height=2}
-
-resi<-data.frame(model$fitted.values,model$residuals)
-
-ggplot(data = resi, aes(model$fitted.values, model$residuals)) +
-geom_point() +
-geom_smooth(color = "firebrick", se = FALSE) +
-geom_hline(yintercept = 0) +
-theme_bw()
+```{r, warning=FALSE, message=FALSE, eval=TRUE, echo=TRUE, fig.height=2}
 
 
 library(lmtest)
 bptest(model)
 
+
 ```
+
 
 
 ]
-
-
----
-
-> Variabilidad constante de los residuos (homocedasticidad):
-
-No hay evidencias de falta de homocedasticidad, ante una significancia del 10%
-
-```{r, warning=FALSE, message=FALSE, eval=TRUE, echo=FALSE, fig.height=2}
-
-resi<-data.frame(model$fitted.values,model$residuals)
-
-ggplot(data = resi, aes(model$fitted.values, model$residuals)) +
-geom_point() +
-geom_smooth(color = "firebrick", se = FALSE) +
-geom_hline(yintercept = 0) +
-theme_bw()
-
-library(lmtest)
-bptest(model)
-
-
-```
 
 
 ---

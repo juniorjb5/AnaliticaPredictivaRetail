@@ -169,7 +169,7 @@ class: right
 
 <br>
 
-> - .font120[Estas decisiones pueden tener grandes consecuencias económicas y ser difíciles debido a la `incertidumbre de los datos` y la falta de información perfecta sobre el futuro.]
+> - .font120[Estas decisiones pueden tener grandes consecuencias económicas y ser difíciles debido a la `incertidumbre` y la falta de información perfecta sobre el futuro.]
 
 <br>
 
@@ -230,7 +230,7 @@ background-size: cover
 
 ----
 
-.left-col[
+.pull-left[
 
 ### Componentes del Business Analytics
 
@@ -243,27 +243,13 @@ background-size: cover
 ]
 
 
-.center-col[
+.pull-right[
 
 ### Objetivos
 
 - Mejor comprensión de las operaciones comerciales
 - Mejorar la gestión de las relaciones con los clientes
 - Toma de decisiones informadas
-
-]
-
-
-
-.right-col[
-
-### Retail
-
-----
-
-.center[*Los minoristas utilizan la analítica para recomendar productos a los clientes y optimizar las promociones de marketing.*]
-
-----
 
 ]
 
@@ -278,7 +264,7 @@ background-size: cover
 
 
 ## Usando analítica, 
-## las empresas pueden:
+## las empresas de Retail pueden:
 
 .pull-left[
 
@@ -309,16 +295,14 @@ background-size: cover
 
 .font120[La analítica empresarial comienza con la **recopilación,** **organización** y **manipulación de datos** y se apoya en tres componentes principales.]
 
+<br>
+
 .pull-left[
 
 > 1️⃣ ** Analítica Descriptiva**
 
 
 - Uso de datos para entender el rendimiento pasado y actual del negocio y tomar decisiones informadas. Es el tipo de analítica más común y mejor comprendido.
-
-- Categoriza, caracteriza, consolida y clasifica datos para convertirlos en información útil.
-
-- Resume datos en gráficos e informes significativos sobre presupuestos, ventas, ingresos o costos.
 
 
 ]
@@ -351,18 +335,15 @@ Permite responder aspectos como:
 
 .font120[La analítica empresarial comienza con la **recopilación,** **organización** y **manipulación de datos** y se apoya en tres componentes principales.]
 
+
+<br>
+
 .pull-left[
 
 > 2️⃣ ** Analítica Predictiva**
 
 
 - Busca predecir examinando datos históricos, detectando patrones o relaciones y extrapolándolos en el tiempo.
-
-- Predice riesgos y encuentra relaciones en datos que no son evidentes con análisis tradicionales.
-
-- Utiliza técnicas avanzadas para detectar patrones ocultos en grandes cantidades de datos.
-
-- Segmenta y agrupa datos para predecir comportamientos y detectar tendencias.
 
 
 ]
@@ -394,17 +375,15 @@ Permite responder aspectos como:
 
 .font120[La analítica empresarial comienza con la **recopilación,** **organización** y **manipulación de datos** y se apoya en tres componentes principales.]
 
+
+<br>
+
 .pull-left[
 
 > 3️⃣ ** Analítica Prescriptiva**
 
 
 - Utiliza la optimización para identificar las mejores alternativas que minimizan o maximizan un objetivo específico.
-
-- Tiene en cuenta limitaciones como capacidad de almacenamiento, presupuesto, personal disponible y horarios de atención.
-
-- Analiza diferentes escenarios futuros, incluyendo variaciones en la demanda o interrupciones en la cadena de suministro.
-
 
 
 ]
@@ -417,7 +396,6 @@ Permite responder aspectos como:
 
 - `¿Cuál es la cantidad óptima de stock que debemos mantener para cada producto en cada tienda para minimizar costos y evitar rupturas de stock?`
 
-- `¿Qué precios debemos establecer para maximizar las ventas y el margen de beneficio considerando la competencia y la sensibilidad al precio de los clientes?`
 
 - `¿Cómo deberíamos redistribuir el inventario si una tienda tiene que cerrar temporalmente?`
 
@@ -425,84 +403,6 @@ Permite responder aspectos como:
 ]
 
 
----
-
-# Ejemplo
-
-
-### Decisiones de reducción de precios en retail
-
-
-.pull-left-narrow[
-
-
-<img src="https://media.giphy.com/media/2xaZSDYxBp408/giphy.gif?cid=ecf05e47flfkega5idknyfvdvpcwcqkoa96neek78lrkvmmz&ep=v1_gifs_search&rid=giphy.gif" width="70%"/>
-
-
-]
-
-
-.pull-right-narrow[
-
-<br>
-
-----
-
-Las tiendas departamentales y de moda liquidan inventarios de temporada reduciendo precios gradualmente.
-
-**Pregunta clave:** *¿Cuándo y cuánto reducir el precio para alcanzar las metas de inventario y maximizar ingresos?*
-
-
-----
-
-<br>
-
-Una tienda tiene 100 trajes de baño en un estilo específico, con venta prevista desde abril hasta finales de junio.
-
-> **Objetivo:** Vender todos los trajes de baño en 12 semanas. Cada semana, deben decidir cuándo y cuánto descontar el precio (24 decisiones en total).
-
-]
-
-
-.center[
-.orange[*Para una cadena nacional con miles de productos, estas decisiones se multiplican, creando muchas combinaciones posibles.*]
-]
-
-
----
-
-# Ejemplo
-
-
-### Decisiones de reducción de precios en retail
-
-
-.orange[**Tipos de Analítica Utilizados:**]
-
-
-.pull-left[
-
-#### Analítica Descriptiva:
-
-- Examina datos históricos: ventas pasadas, precios, inventario, promociones.
-- Proporciona un entendimiento de los resultados previos.
-
-
-#### Analítica Predictiva:
-
-- Predice ventas futuras según las decisiones de precios.
-- Ayuda a anticipar la demanda en respuesta a los descuentos.
-
-]
-
-.pull-right[
-
-#### Analítica Prescriptiva:
-
-- Identifica la mejor combinación de precios y tiempos de descuento.
-- Optimiza ingresos a lo largo de las 12 semanas.
-
-]
 
 
 

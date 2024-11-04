@@ -127,14 +127,14 @@ background-size: cover
 
 <br>
 
-.font140[$$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso + u$$]
+.font140[$$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso + e$$]
 
-- $u$: Término de error
+- $e$: Término de error
 Variable aleatoria que representa factores adicionales que influyen en el gasto en retail.
 
 <br>
 
-.font140[*El término de error $u$ representa* **.orange[todos los factores]** *que afectan el gasto en retail pero que no están en el modelo explícitamente.*]
+.font140[*El término de error $e$ representa* **.orange[todos los factores]** *que afectan el gasto en retail pero que no están en el modelo explícitamente.*]
 
 ---
 
@@ -260,7 +260,7 @@ $$\hat{Retail_{Gasto_{Sgte}}} = 200 + 0.6 \cdot (50,000) = 30,200$$
 
 - **Modelo**: Regresión Lineal Simple
 
-$$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso + u$$
+$$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso + e$$
 
 $\beta_1$: Propensión Marginal a Consumir (PMC) en retail.
 
@@ -296,28 +296,6 @@ $$\hat{Retail_{Gasto}} = 200 + 0.6 \cdot Ingreso$$
 
 
 
-# Comparación de Metodologías: Económica vs. CRISP-DM
-
-
-.pull-left[
-### Metodología Económica
-- **Enfoque**: Explicación teórica del consumo (PMC).
-- **Modelo**: Regresión para analizar la relación ingreso-gasto.
-- **Aplicación**: Evaluación de hipótesis y teorías macroeconómicas.
-- **Ventaja**: Proporciona una comprensión profunda de la lógica económica.
-- **Desventaja**: Menos adaptada a la manipulación de grandes volúmenes de datos.
-]
-
-.pull-right[
-### CRISP-DM
-- **Enfoque**: Procesos de análisis de datos orientados a decisiones.
-- **Modelo**: Estructura flexible para procesamiento, limpieza y modelado.
-- **Aplicación**: Permite iteraciones rápidas y extracción de insights prácticos.
-- **Ventaja**: Adaptabilidad a grandes datasets y resultados aplicables.
-- **Desventaja**: Puede carecer de una base teórica profunda.
-]
-
----
 
 
 
