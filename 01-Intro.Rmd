@@ -1,0 +1,509 @@
+---
+title: "01-Intro"
+author: "Jota"
+date: "2024-11-01"
+output: html_document
+---
+
+
+
+
+class: middle
+background-image: url("images/1.png")
+background-size: cover
+
+
+
+.pull-left-narrow[
+
+
+
+]
+
+.pull-right-wide[
+
+# ¡Todos tomamos decisiones!
+
+----
+
+]
+
+
+---
+
+
+
+
+class: right
+
+# ▶️ ¿Cuál fue la última vez que fuiste al supermercado?
+
+<br>
+<br>
+
+--
+
+# ¿Qué compra hiciste? 🛒
+
+
+.pull-left[
+
+<img src="https://media.giphy.com/media/rp2ah0e8NEjxIMmYZv/giphy.gif?cid=790b7611g55jdlzqeyzd16q6jxv5u5huidghm7l28hl874k3&ep=v1_gifs_search&rid=giphy.gif" width="110%"/>
+
+]
+
+
+.pull-right[
+
+
+]
+
+---
+
+
+
+class: right
+
+# ▶️ ¿Cuál fue la última vez que fuiste al supermercado?
+
+<br>
+<br>
+
+
+
+# ¿Qué compra hiciste? 🛒
+
+
+.pull-left[
+
+<img src="https://media.giphy.com/media/rp2ah0e8NEjxIMmYZv/giphy.gif?cid=790b7611g55jdlzqeyzd16q6jxv5u5huidghm7l28hl874k3&ep=v1_gifs_search&rid=giphy.gif" width="110%"/>
+
+]
+
+
+
+.pull-right[
+
+.left[ 
+- ¿Por qué compraste ese producto específico?
+
+- ¿Por qué esa marca?
+
+- ¿Por qué solo una unidad? ¿dos? ¿tres? ...
+
+- Simplemente tu no vas de compras y quien compra es tu mamá... tu papá... tu pareja💁‍♀️...
+]
+
+]
+
+---
+
+
+
+
+
+.pull-left[
+
+
+## Los individuos enfrentan decisiones personales
+
+> .font100[Me gusta más el verde 🟢 que el rojo 🔴...]
+
+> .font100[El dinero no me alcanza 💰...] 
+
+> .font100[Tengo la capacidad de endeudarme 💳 y comprarlo...] 
+
+> .font100[etc..] 
+
+.center[
+
+<img src="https://media.giphy.com/media/v1.Y2lkPTc5MGI3NjExajAzODBxcjVmaHF4NmV2aWtzNjMxOXB3NjBmajJpNGY4cXhzazZhOSZlcD12MV9naWZzX3NlYXJjaCZjdD1n/pFZTlrO0MV6LoWSDXd/giphy.gif" width="80%"/>
+
+]
+
+]
+
+.pull-right[
+
+<br>
+<br>
+<br>
+
+.center[
+
+## Los gerentes en las organizaciones también toman decisiones diariamente
+
+<br>
+
+----
+
+<br>
+
+### ¿Qué productos fabricar?, ¿Cómo fijar precios?, ¿Dónde ubicar instalaciones?, ¿Cómo asignar presupuestos de publicidad?, etc
+
+]
+
+]
+
+
+
+---
+
+
+
+# Incertidumbre
+
+.pull-left-narrow[
+
+
+<br>
+<br>  
+<br>
+
+
+# En las organizaciones
+
+]
+
+.pull-right-wide[
+
+<br>
+
+> - .font120[Estas decisiones pueden tener grandes consecuencias económicas y ser difíciles debido a la `incertidumbre de los datos` y la falta de información perfecta sobre el futuro.]
+
+<br>
+
+<hr>
+
+<br>
+
+> - .font120[`La gran cantidad de datos` disponibles hace que estas decisiones sean cada vez más complicadas, lo que subraya la importancia de la analítica en los negocios actuales.]
+
+]
+
+
+
+---
+
+
+class: middle
+background-image: url("images/retail_5.jpg")
+background-size: cover
+
+
+
+---
+
+
+
+class: middle
+background-image: url("images/retail_6.jpg")
+background-size: cover
+
+
+
+---
+
+
+class: middle
+background-image: url("images/retail_7.jpg")
+background-size: cover
+
+
+
+
+---
+
+
+# Analítica de Negocios / Business Analytics
+
+
+<br>
+
+.center[
+`Es un proceso de transformar datos en acciones a través del análisis y las perspectivas en el contexto de la toma de decisiones organizacionales y la resolución de problemas.`
+]
+
+<br>
+
+
+
+----
+
+.left-col[
+
+### Componentes del Business Analytics
+
+
+- Datos 
+- Tecnología
+- Métodos cuantitativos
+
+
+]
+
+
+.center-col[
+
+### Objetivos
+
+- Mejor comprensión de las operaciones comerciales
+- Mejorar la gestión de las relaciones con los clientes
+- Toma de decisiones informadas
+
+]
+
+
+
+.right-col[
+
+### Retail
+
+----
+
+.center[*Los minoristas utilizan la analítica para recomendar productos a los clientes y optimizar las promociones de marketing.*]
+
+----
+
+]
+
+
+
+
+---
+
+class: middle
+background-image: url("images/retail_4.jpg")
+background-size: cover
+
+
+## Usando analítica, 
+## las empresas pueden:
+
+.pull-left[
+
+> - .font120[.orange[**Integrar**] datos de redes sociales con fuentes de datos tradicionales como encuestas a clientes, grupos focales y datos de ventas.]
+
+> - .font120[.orange[**Comprender**] las tendencias y las percepciones de los clientes sobre sus productos.]
+
+> - .font120[.orange[**Crear**] informes informativos para ayudar a los gerentes de marketing y a los diseñadores de productos.]
+
+]
+
+
+
+
+.pull-right[
+
+
+]
+
+
+
+---
+
+
+
+# Objetivo del Business Analytics
+
+
+.font120[La analítica empresarial comienza con la **recopilación,** **organización** y **manipulación de datos** y se apoya en tres componentes principales.]
+
+.pull-left[
+
+> 1️⃣ ** Analítica Descriptiva**
+
+
+- Uso de datos para entender el rendimiento pasado y actual del negocio y tomar decisiones informadas. Es el tipo de analítica más común y mejor comprendido.
+
+- Categoriza, caracteriza, consolida y clasifica datos para convertirlos en información útil.
+
+- Resume datos en gráficos e informes significativos sobre presupuestos, ventas, ingresos o costos.
+
+
+]
+
+
+.pull-right[
+
+
+Permite responder aspectos como:
+
+- `¿Cuánto vendimos en cada región?`
+
+- `¿Cuál fue nuestro ingreso y beneficio el último trimestre?`
+
+- `¿Cuántas y qué tipos de quejas resolvimos?`
+
+- `¿Qué fábrica tiene la productividad más baja?`
+
+
+]
+
+
+---
+
+
+
+
+# Objetivo del Business Analytics
+
+
+.font120[La analítica empresarial comienza con la **recopilación,** **organización** y **manipulación de datos** y se apoya en tres componentes principales.]
+
+.pull-left[
+
+> 2️⃣ ** Analítica Predictiva**
+
+
+- Busca predecir examinando datos históricos, detectando patrones o relaciones y extrapolándolos en el tiempo.
+
+- Predice riesgos y encuentra relaciones en datos que no son evidentes con análisis tradicionales.
+
+- Utiliza técnicas avanzadas para detectar patrones ocultos en grandes cantidades de datos.
+
+- Segmenta y agrupa datos para predecir comportamientos y detectar tendencias.
+
+
+]
+
+
+.pull-right[
+
+
+Permite responder aspectos como:
+
+- `¿Qué sucederá si la demanda de un producto cae un 10% o si los precios de los proveedores aumentan un 5%?`
+
+- `¿Qué productos deberíamos promocionar para aumentar las ventas durante la temporada festiva?`
+
+- `¿Qué segmentos de clientes son más propensos a responder positivamente a una promoción específica?`
+
+
+]
+
+
+---
+
+
+
+
+
+# Objetivo del Business Analytics
+
+
+.font120[La analítica empresarial comienza con la **recopilación,** **organización** y **manipulación de datos** y se apoya en tres componentes principales.]
+
+.pull-left[
+
+> 3️⃣ ** Analítica Prescriptiva**
+
+
+- Utiliza la optimización para identificar las mejores alternativas que minimizan o maximizan un objetivo específico.
+
+- Tiene en cuenta limitaciones como capacidad de almacenamiento, presupuesto, personal disponible y horarios de atención.
+
+- Analiza diferentes escenarios futuros, incluyendo variaciones en la demanda o interrupciones en la cadena de suministro.
+
+
+
+]
+
+
+.pull-right[
+
+
+Permite responder aspectos como:
+
+- `¿Cuál es la cantidad óptima de stock que debemos mantener para cada producto en cada tienda para minimizar costos y evitar rupturas de stock?`
+
+- `¿Qué precios debemos establecer para maximizar las ventas y el margen de beneficio considerando la competencia y la sensibilidad al precio de los clientes?`
+
+- `¿Cómo deberíamos redistribuir el inventario si una tienda tiene que cerrar temporalmente?`
+
+
+]
+
+
+---
+
+# Ejemplo
+
+
+### Decisiones de reducción de precios en retail
+
+
+.pull-left-narrow[
+
+
+<img src="https://media.giphy.com/media/2xaZSDYxBp408/giphy.gif?cid=ecf05e47flfkega5idknyfvdvpcwcqkoa96neek78lrkvmmz&ep=v1_gifs_search&rid=giphy.gif" width="70%"/>
+
+
+]
+
+
+.pull-right-narrow[
+
+<br>
+
+----
+
+Las tiendas departamentales y de moda liquidan inventarios de temporada reduciendo precios gradualmente.
+
+**Pregunta clave:** *¿Cuándo y cuánto reducir el precio para alcanzar las metas de inventario y maximizar ingresos?*
+
+
+----
+
+<br>
+
+Una tienda tiene 100 trajes de baño en un estilo específico, con venta prevista desde abril hasta finales de junio.
+
+> **Objetivo:** Vender todos los trajes de baño en 12 semanas. Cada semana, deben decidir cuándo y cuánto descontar el precio (24 decisiones en total).
+
+]
+
+
+.center[
+.orange[*Para una cadena nacional con miles de productos, estas decisiones se multiplican, creando muchas combinaciones posibles.*]
+]
+
+
+---
+
+# Ejemplo
+
+
+### Decisiones de reducción de precios en retail
+
+
+.orange[**Tipos de Analítica Utilizados:**]
+
+
+.pull-left[
+
+#### Analítica Descriptiva:
+
+- Examina datos históricos: ventas pasadas, precios, inventario, promociones.
+- Proporciona un entendimiento de los resultados previos.
+
+
+#### Analítica Predictiva:
+
+- Predice ventas futuras según las decisiones de precios.
+- Ayuda a anticipar la demanda en respuesta a los descuentos.
+
+]
+
+.pull-right[
+
+#### Analítica Prescriptiva:
+
+- Identifica la mejor combinación de precios y tiempos de descuento.
+- Optimiza ingresos a lo largo de las 12 semanas.
+
+]
+
+
+
+

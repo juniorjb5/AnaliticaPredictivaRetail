@@ -1,0 +1,200 @@
+---
+title: "06-Caso"
+author: "Jota"
+date: "2024-11-03"
+output: html_document
+---
+
+
+
+class: middle
+background-image: url("images/6.png")
+background-size: cover
+
+
+
+.pull-left-narrow[
+
+
+
+]
+
+.pull-right-wide[
+
+# Caso
+----
+
+]
+
+
+---
+
+
+
+
+class: middle
+background-image: url("images/caso.png")
+background-size: cover
+
+
+
+.pull-left[
+
+
+### La empresa Adidas desea entender los factores que influyen en el desempeño de ventas de sus productos (ventas totales). 
+
+- Buscamos predecir las ventas en función de variables cuantitativas como el precio por unidad y el número de unidades vendidas, así como variables categóricas como el método de ventas y el retailer. 
+
+
+- Con esta predicción, el equipo puede ajustar sus estrategias de venta para maximizar el rendimiento en función de los diferentes métodos de venta y canales de distribución.
+
+]
+
+.pull-right[
+
+
+
+]
+
+
+
+---
+
+
+
+
+class: middle
+background-image: url("images/caso2.png")
+background-size: cover
+
+
+
+.pull-left[
+
+
+# Shinny en la analítica predictiva
+
+
+
+
+]
+
+.pull-right[
+
+
+
+]
+
+
+---
+
+
+
+
+
+class: middle
+background-image: url("images/7.png")
+background-size: cover
+
+
+
+.pull-left-narrow[
+
+
+
+]
+
+.pull-right-wide[
+
+# Conclusiones
+----
+
+]
+
+
+---
+
+# Conclusiones
+
+<br>
+<br>
+<br>
+
+.pull-left-narrow[
+
+
+
+<img src="https://media.giphy.com/media/lTpme2Po0hkqI/giphy.gif?cid=790b7611jrfoz1bhpb0qergm5y3i7xm9nm1vtgvj2fn4x3oi&ep=v1_gifs_search&rid=giphy.gif" width="100%"/>
+
+]
+
+
+.pull-right-wide[
+
+> - .orange[Mejora en estrategias de ventas:] La analítica predictiva permite identificar patrones de compra y ajustar precios y estrategias de distribución en función del comportamiento del cliente.
+
+
+
+> - .orange[Predicciones basadas en datos:] Modelos como la regresión lineal ayudan a anticipar la demanda, considerando variables clave como el precio y el canal de venta, facilitando una toma de decisiones informada.
+
+
+
+> - .orange[Herramientas interactivas para análisis:] R y Tableros como Shiny permiten visualizar datos en tiempo real, facilitando el análisis de resultados y ajustes rápidos en estrategias de retail.
+
+
+]
+
+
+
+---
+
+class: inverse, center, middle
+background-color: #122140
+
+.pull-left[
+
+.center[
+<br><br>
+
+# Gracias!!!
+
+<br>
+
+
+
+### ¿Preguntas?
+
+<br>
+
+
+```{r qr, echo=FALSE, fig.align="center", out.width="49%"}
+knitr::include_graphics("images/qr-code.png")
+```
+
+
+]
+
+
+]
+
+
+.pull-right[
+
+<br> 
+<br> 
+<img style="border-radius: 50%;" src="images/avatar.png"
+width="150px"
+/>
+
+### [www.joaquibarandica.com](https://www.joaquibarandica.com)
+
+`r icon("envelope")` orlando.joaqui@correounivalle.edu.co
+
+<img src="images/Logo.jpg" width="120%">
+
+]
+
+
+<br><br><br>
+
+

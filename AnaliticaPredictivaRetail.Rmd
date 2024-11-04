@@ -1,0 +1,152 @@
+---
+title: "Análitica predictiva en Retail"
+subtitle: "Usando R"
+author: "Orlando Joaqui-Barandica, PhD"
+institute: "Universidad del Valle, Cali, Colombia"
+date: "Noviembre 6, 2024"
+output:
+  xaringan::moon_reader:
+    css: ["default", "rladies-spc.css", "rladies-fonts.css", "sydney.css", "mtheme.css"]
+    #css: ["default", "rladies", "rladies-fonts"]
+    lib_dir: libs
+    seal: false 
+    nature:
+      highlightStyle: github
+      highlightLines: true
+      highlightLanguage: ["r", "css", "yaml"]
+      ratio: "16:9"
+      countIncrementalSlides: false
+      slideNumber: false
+      progress: true
+---
+
+```{r setup, include=FALSE}
+options(htmltools.dir.version = FALSE)
+knitr::opts_chunk$set(collapse = TRUE,
+                      fig.retina = 3,
+                      warning = FALSE,
+                      message = FALSE)
+
+library(tidyverse)
+library(palmerpenguins)
+library(nord)
+library(prismatic)
+library(xaringanExtra)
+xaringanExtra::use_xaringan_extra(include = c("panelset", "tile_view", "share_again"))
+xaringanExtra::use_clipboard()
+xaringanExtra::style_share_again(share_buttons = c("twitter", "linkedin", "pocket"))
+#xaringanExtra::embed_xaringan(
+#  url = "https://spcanelon.github.io/2020-rladies-chi-tidyverse", ratio = "16:9")
+```
+
+
+class: title-slide, left, bottom
+background-image: url("images/retail_2.jpg")
+background-size: cover
+
+
+
+# `r rmarkdown::metadata$title`
+
+
+## `r rmarkdown::metadata$subtitle`
+----
+
+
+### `r rmarkdown::metadata$author`
+
+### `r rmarkdown::metadata$date`
+
+
+---
+
+class: about-me, middle, center
+
+
+<img style="border-radius: 50%;" src="https://www.joaquibarandica.com/author/orlando-joaqui-barandica/avatar_hu5023ea1d1aacf3c485a0bf644538baf2_3165736_270x270_fill_lanczos_center_2.png" width="150px"/>
+
+## Orlando Joaqui-Barandica
+
+### Estadístico | Magíster en Economía Aplicada | Doctor en Ingeniería
+
+### Universidad del Valle
+
+
+
+
+[`r icon::fa("link")` www.joaquibarandica.com](https://www.joaquibarandica.com)<br/>
+
+
+---
+
+
+# Contenido de la Presentación
+
+
+.pull-left[
+
+## 1. Introducción
+
+## 2. Datos
+
+## 3. R: Introducción a la Herramienta
+
+## 4. Metodologías de Modelación
+
+]
+
+.pull-right[
+
+## 5. Regresión Lineal
+
+## 6. Caso de Estudio: Aplicación Práctica
+
+## 7. Conclusiones
+
+]
+---
+
+
+```{r 01-Intro, child="01-Intro.Rmd"}
+```
+
+
+---
+
+
+
+```{r 02-Datos, child="02-Datos.Rmd"}
+```
+
+
+---
+
+
+```{r 03-R, child="03-R.Rmd"}
+```
+
+
+---
+
+
+
+```{r 04-Metodologias, child="04-Metodologias.Rmd"}
+```
+
+---
+
+
+
+
+```{r 05-RegresionLineal, child="05-RegresionLineal.Rmd"}
+```
+
+---
+
+
+
+```{r 06-Caso, child="06-Caso.Rmd"}
+```
+
+
+

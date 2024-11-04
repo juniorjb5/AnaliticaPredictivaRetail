@@ -1,0 +1,825 @@
+---
+title: "03-R"
+author: "Silvia P. Canelón"
+date: "9/19/2020"
+output: html_document
+---
+
+
+
+```{r, include = FALSE}
+library(knitr)                              # paquete que trae funciones utiles para R Markdown
+library(tidyverse)                          # paquete que trae varios paquetes comunes en el tidyverse
+library(datos)                              # paquete que viene con datos populares traducidos al español :)
+library(shiny)
+# opciones predeterminadas
+knitr::opts_chunk$set(echo = FALSE,         # FALSE: los bloques de código NO se muestran
+                      dpi = 300,            # asegura gráficos de alta resolución
+                      warning = FALSE,      # los mensajes de advertencia NO se muestran
+                      error = FALSE)        # los mensajes de error NO se muestran
+
+
+options(htmltools.dir.version = FALSE)
+```
+
+
+
+
+class: middle
+background-image: url("images/3.png")
+background-size: cover
+
+
+
+.pull-left-narrow[
+
+
+
+]
+
+.pull-right-wide[
+
+# La herramienta: R
+----
+]
+
+
+
+---
+
+
+
+background-image: url(images/monalisa1.jpg)
+background-size: cover
+
+class: inverse, center, middle
+
+
+# Visualización de datos // #DataViz... 
+
+--
+
+## ... es donde traducimos números en formas y colores...
+
+
+
+---
+
+class: center, middle
+
+.pull-left[
+
+<img src="images/einstein.jpg" width="50%"/>
+
+]
+
+
+.pull-right[
+
+<img src="images/monalisa2.jpg" width="40%"/>
+
+]
+
+----
+
+# Ciencia + Arte
+
+--
+
+### Esta comunicación humana es la forma en que nuestro tranquilo trabajo cuantitativo se convierte en un generador de ingresos trascendente o en una estrategia de producción. Incluso si planeamos implementar algoritmos y nunca compartir nuestro trabajo fuera de nuestra propia empresa, la capacidad de explicar y comunicar es muy importante.
+
+
+.font100[
+`r icon::fa("link", animate = "passing")` [Dashboard - Corporate Social Responsibility Barometer, an app of text mining.](https://juniorjb5.shinyapps.io/Value_at_Risk/)
+]
+
+
+
+---
+background-image: url(images/back3.jpg)
+background-size: cover
+
+class: center, middle
+
+# `r icon("chart-pie")`
+# Basic Graphs
+----
+
+
+
+---
+
+# `r icon("chart-pie")`  Basic Graphs
+
+.left-column[
+Un gráfico básico aunque puede ser muy informativo de manera clara y concisa, la estética *(Ej: Color, Relleno (Fill), Labels, Size, Axes, ...)* 💅 hace que su lectura no sea agradable.
+
+
+### Barplot
+]
+
+.right-column[
+```{r  echo=FALSE, warning=FALSE, message=FALSE, fig.height = 3 }
+# defining vector
+y <- c(15, 32, 10, 44, 56)
+x <- c("Julia","Python", "R","Tableau","Power BI")
+
+
+# plotting vector
+barplot(y, xlab = "Softwares", col = "white",
+		ylab = "Conteo", names.arg = x, main = "Uso de software por parte de los estudiantes")
+
+```
+
+]
+
+---
+
+
+
+# `r icon("chart-pie")`  Basic Graphs
+
+.left-column[
+Un gráfico básico aunque puede ser muy informativo de manera clara y concisa, la estética *(Ej: Color, Relleno (Fill), Labels, Size, Axes, ...)* 💅 hace que su lectura no sea agradable.
+
+
+### Barplot
+]
+
+.right-column[
+```{r  echo=FALSE, warning=FALSE, message=FALSE, fig.height = 3 }
+# defining vector
+y <- c(15, 32, 10, 44, 56)
+x <- c("Julia","Python", "R","Tableau","Power BI")
+
+
+# plotting vector
+barplot(y, xlab = "Softwares", col = "green",
+		ylab = "Conteo", names.arg = x, main = "Uso de software por parte de los estudiantes")
+
+```
+
+
+.footnote[
+### 👀 Ojo!
+> No siempre la solución es el color..
+
+]
+]
+
+---
+
+background-image: url(images/monalisa1.jpg)
+background-size: cover
+
+class: inverse, center, middle
+
+# Entonces... ¿Qué es la estética?
+
+
+---
+
+# Estética
+
+.left-column[
+
+## Dícese de .... `r icon("glasses")`
+
+![](https://media.giphy.com/media/LTYT5GTIiAMBa/giphy.gif?cid=ecf05e474eh4j630guuedkpr6o39pg8nrur134aqur14r66i&ep=v1_gifs_search&rid=giphy.gif)
+
+]
+
+
+.right-column[
+
+La estética (del griego αἰσθητική [aisthetikê], ‘sensación’, ‘percepción’, y este de[aísthesis], ‘sensación’, ‘sensibilidad’, e -ικά [-icá], ‘relativo a’) es la rama de la filosofía que estudia la esencia y la percepción de la belleza y el arte.
+
+
+Algunos autores definen la estética de manera más amplia, como el estudio de las experiencias estéticas y los juicios estéticos en general, y no solo los relativos a la belleza. Cuando juzgamos algo como «bello», «feo», «sublime» o «elegante» (por dar algunos ejemplos), estamos haciendo juicios estéticos, que a su vez expresan experiencias estéticas. La estética es el dominio de la filosofía, estudiando el arte y cualidades como la belleza; asimismo es el estudio de estas experiencias y juicios que suceden día a día en las actividades que realizamos, produciendo sensaciones y emociones ya sean positivas o negativas en nuestra persona. La estética busca el por qué de algunas cuestiones, por ejemplo, por qué algún objeto, pintura o escultura no resulta atractivo para los espectadores; por lo tanto el arte lleva relación a la estética ya que busca generar sensaciones a través de una expresión............ 🥱🥱🥱🥱🥱🥱🥱🥱🥱🥱🥱
+
+
+----
+.right[
+Tomado de [Wikipedia](https://es.wikipedia.org/wiki/Est%C3%A9tica)
+]
+]
+
+
+---
+
+class: center, middle
+
+.pull-left[
+
+<img src="images/einstein.jpg" width="50%"/>
+
+]
+
+
+.pull-right[
+
+<img src="images/monalisa2.jpg" width="40%"/>
+
+]
+
+----
+
+# Al final la "estética es relativa"
+
+
+### Lo que para uno es *"bonito"* para otro no
+
+---
+
+background-image: url(images/back3.jpg)
+background-size: cover
+
+class: center, middle
+
+# `r icon("chart-bar")`
+# Good Graphs
+----
+
+
+
+
+---
+
+# `r icon("chart-bar")` Good Graphs
+
+
+.pull-left[
+
+
+### ggplot2
+
+> Es una de las librerías de la colección de tidyverse. `ggplot2 es un sistema para crear gráficos de forma declarativa, basado en The Grammar of Graphics . Usted proporciona los datos, le dice a ggplot2 cómo asignar variables a la estética, qué geometrías gráficas usar y se encarga de los detalles.`
+
+.center[
+<img src="https://soka.gitlab.io/blog/post/2019-04-25-r-ggplot2-scatterplot/images/ggplot_hex.jpg" 
+width="150px"/>
+]
+
+]
+
+.pull-right[
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+library(ggplot2)
+
+# Create data
+data <- data.frame(
+  name=c("A","B","C","D","E") ,  
+  value=c(3,12,5,18,45)
+  )
+
+# Barplot
+ggplot(data, aes(x=name, y=value)) + 
+  geom_bar(stat = "identity")
+```
+
+
+
+]
+
+
+---
+
+# `r icon("chart-bar")` Good Graphs
+
+
+
+```{r echo=FALSE,message=FALSE,warning=FALSE,out.width="100%",fig.height=3.5 }
+library(ggplot2)
+library(patchwork)
+p1 <- ggplot(mtcars) + geom_point(aes(mpg, disp))
+p2 <- ggplot(mtcars) + geom_boxplot(aes(factor(gear), disp))
+p3 <- ggplot(mtcars) + geom_smooth(aes(disp, qsec)) 
+p4 <- ggplot(mtcars) + geom_bar(aes(factor(carb)))
+
+# Combina en dos filas de dos gráficos cada una
+gridExtra::grid.arrange(p1,p2,p3,p4,nrow=2, ncol=2)
+```
+
+---
+
+# `r icon("chart-bar")` Good Graphs
+
+.pull-left[
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# Libraries
+library(tidyverse)
+library(hrbrthemes)
+library(viridis)
+
+# create a dataset
+data <- data.frame(
+  name=c( rep("A",500), rep("B",500), rep("B",500), rep("C",20), rep('D', 100)  ),
+  value=c( rnorm(500, 10, 5), rnorm(500, 13, 1), rnorm(500, 18, 1), rnorm(20, 25, 4), rnorm(100, 12, 1) )
+)
+
+# Plot
+data %>%
+  ggplot( aes(x=name, y=value, fill=name)) +
+    geom_boxplot() +
+    scale_fill_viridis(discrete = TRUE, alpha=0.6) +
+    geom_jitter(color="black", size=0.4, alpha=0.9) +
+    theme_ipsum() +
+    theme(
+      legend.position="none",
+      plot.title = element_text(size=11)
+    ) +
+    ggtitle("A boxplot with jitter") +
+    xlab("")
+```
+
+]
+
+.pull-right[
+
+```{r echo=FALSE, message=FALSE, warning=FALSE}
+# library
+library(tidyverse)
+ 
+# Create dataset
+data <- data.frame(
+  individual=paste( "Mister ", seq(1,60), sep=""),
+  group=c( rep('A', 10), rep('B', 30), rep('C', 14), rep('D', 6)) ,
+  value=sample( seq(10,100), 60, replace=T)
+)
+ 
+# Set a number of 'empty bar' to add at the end of each group
+empty_bar <- 4
+to_add <- data.frame( matrix(NA, empty_bar*nlevels(data$group), ncol(data)) )
+colnames(to_add) <- colnames(data)
+to_add$group <- rep(levels(data$group), each=empty_bar)
+data <- rbind(data, to_add)
+data <- data %>% arrange(group)
+data$id <- seq(1, nrow(data))
+ 
+# Get the name and the y position of each label
+label_data <- data
+number_of_bar <- nrow(label_data)
+angle <- 90 - 360 * (label_data$id-0.5) /number_of_bar     # I substract 0.5 because the letter must have the angle of the center of the bars. Not extreme right(1) or extreme left (0)
+label_data$hjust <- ifelse( angle < -90, 1, 0)
+label_data$angle <- ifelse(angle < -90, angle+180, angle)
+ 
+# Make the plot
+p <- ggplot(data, aes(x=as.factor(id), y=value, fill=group)) +       # Note that id is a factor. If x is numeric, there is some space between the first bar
+  geom_bar(stat="identity", alpha=0.5) +
+  ylim(-100,120) +
+  theme_minimal() +
+  theme(
+    legend.position = "none",
+    axis.text = element_blank(),
+    axis.title = element_blank(),
+    panel.grid = element_blank(),
+    plot.margin = unit(rep(-1,4), "cm") 
+  ) +
+  coord_polar() + 
+  geom_text(data=label_data, aes(x=id, y=value+10, label=individual, hjust=hjust), color="black", fontface="bold",alpha=0.6, size=2.5, angle= label_data$angle, inherit.aes = FALSE ) 
+ 
+p
+```
+
+]
+
+
+
+---
+
+# `r icon("chart-bar")` Good Graphs
+
+### Maps in R
+
+
+.left-column[
+
+```{r echo=FALSE, message=FALSE, warning=FALSE , out.width = "900%",fig.height=  10 }
+library(maptools)
+data(wrld_simpl)
+afr=wrld_simpl[wrld_simpl$REGION==2,]
+ 
+# We can visualize the region's boundaries with the plot function
+plot(afr)
+```
+
+
+
+
+]
+
+
+.right-column[
+
+```{r echo=FALSE, message=FALSE, warning=FALSE,  fig.height = 3 }
+
+
+# Mapa africa
+
+# Get the shape file of Africa
+library(maptools)
+data(wrld_simpl)
+afr=wrld_simpl[wrld_simpl$REGION==2,]
+
+# We can visualize the region's boundaries with the plot function
+#plot(afr)
+
+library(sf)
+
+sfno <- st_as_sf(afr)
+#st_crs(sfno)
+
+sfproj <- st_transform(sfno, crs = 23038)
+#st_crs(sfproj)
+
+# We work with the cartogram library 
+library(cartogram)
+
+# construct a cartogram using the population in 2005
+afr_cartogram <- cartogram_cont(sfproj, "POP2005", itermax=5)
+
+# This is a new geospatial object, we can visualise it!
+#plot(afr_cartogram)
+
+
+ggplot() +
+  geom_sf(data = afr_cartogram, aes(fill = POP2005))
+
+```
+
+]
+
+
+
+---
+
+# `r icon("comment-dots")` Text Mining
+
+### Wordcloud
+
+.left[
+```{r echo=FALSE, message=FALSE, warning=FALSE, fig.height = 1, out.width="100%" }
+# library
+library(wordcloud2) 
+ 
+# have a look to the example dataset
+# head(demoFreq)
+
+# Basic plot
+demoFreq %>% 
+  wordcloud2()
+
+```
+]
+
+
+
+
+---
+
+class: center, middle
+
+#  `r icon("chart-bar")` 
+# Gráficos interactivos
+----
+
+
+
+---
+
+#  `r icon("chart-bar")` Gráficos interactivos
+
+
+
+.pull-left[
+
+
+### plotly
+
+> La biblioteca de gráficos R de Plotly crea gráficos interactivos con calidad de publicación (También proporciona librerías para Python). `Las bibliotecas de gráficos de código abierto de Plotly son de uso gratuito, funcionan sin conexión y no requieren ningún registro de cuenta. Plotly también tiene ofertas comerciales, como Dash Enterprise y Chart Studio Enterprise.` 
+
+
+.center[
+<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Plotly_logo_for_digital_final_%286%29.png/330px-Plotly_logo_for_digital_final_%286%29.png" 
+width="150px"/>
+]
+
+]
+
+.pull-right[
+
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE }
+
+library(plotly)
+# volcano is a numeric matrix that ships with R
+fig.3d <- plot_ly(z = ~volcano)
+fig.3d <- fig.3d %>% add_surface()
+
+htmltools::save_html(fig.3d, file="images/fig.3d.html")
+
+```
+
+.center[
+<iframe src="images/fig.3d.html" allowtransparency="true" height="450" width="1100" scrolling="yes" style="border: none;" data-external="1"></iframe>
+]
+
+
+]
+
+
+
+---
+
+
+
+
+#  `r icon("chart-bar")` Gráficos interactivos
+
+### Mapas
+
+```{r echo=FALSE, message=FALSE, warning=FALSE }
+library(plotly)
+df <- read.csv("https://raw.githubusercontent.com/plotly/datasets/master/2011_us_ag_exports.csv")
+df$hover <- with(df, paste(state, '<br>', "Beef", beef, "Dairy", dairy, "<br>",
+                           "Fruits", total.fruits, "Veggies", total.veggies,
+                           "<br>", "Wheat", wheat, "Corn", corn))
+# give state boundaries a white border
+l <- list(color = toRGB("white"), width = 2)
+# specify some map projection/options
+g <- list(
+  scope = 'usa',
+  projection = list(type = 'albers usa'),
+  showlakes = TRUE,
+  lakecolor = toRGB('white')
+)
+
+fig.map <- plot_geo(df, locationmode = 'USA-states')
+fig.map <- fig.map %>% add_trace(
+    z = ~total.exports, text = ~hover, locations = ~code,
+    color = ~total.exports, colors = 'Purples'
+  )
+fig.map <- fig.map %>% colorbar(title = "Millions USD")
+fig.map <- fig.map %>% layout(
+    title = '2011 US Agriculture Exports by State<br>(Hover for breakdown)',
+    geo = g
+  )
+
+htmltools::save_html(fig.map, file="images/fig.map.html")
+
+```
+
+.center[
+<iframe src="images/fig.map.html" allowtransparency="true" height="450" width="1100" scrolling="yes" style="border: none;" data-external="1"></iframe>
+]
+
+
+
+
+
+
+---
+
+
+#  `r icon("chart-bar")` Gráficos interactivos
+
+### Gráficos descriptivos (Barras)
+
+```{r echo=FALSE, message=FALSE, warning=FALSE }
+library(plotly)
+
+Animals <- c("Jirafas", "Leones", "Micos")
+SF_Zoo <- c(20, 14, 23)
+LA_Zoo <- c(12, 18, 29)
+data <- data.frame(Animals, SF_Zoo, LA_Zoo)
+
+fig.bar <- plot_ly(data, x = ~Animals, y = ~SF_Zoo, type = 'bar', name = 'Marca Y')
+fig.bar <- fig.bar %>% add_trace(y = ~LA_Zoo, name = 'Marca X')
+fig.bar <- fig.bar %>% layout(yaxis = list(title = 'Conteo'), barmode = 'group')
+
+htmltools::save_html(fig.bar, file="images/fig.bar.html")
+```
+
+
+.center[
+<iframe src="images/fig.bar.html" allowtransparency="true" height="450" width="1100" scrolling="yes" style="border: none;" data-external="1"></iframe>
+]
+
+
+---
+
+#  `r icon("chart-bar")` Gráficos interactivos
+
+### Gráficos descriptivos (Pie)
+
+```{r echo=FALSE, message=FALSE, warning=FALSE }
+# Load ggplot2
+library(plotly)
+
+USPersonalExpenditure <- data.frame("Categorias"=rownames(USPersonalExpenditure), USPersonalExpenditure)
+data <- USPersonalExpenditure[,c('Categorias', 'X1960')]
+
+fig_pie <- plot_ly(data, labels = ~Categorias, values = ~X1960, type = 'pie')
+fig_pie <- fig_pie %>% layout(title = 'Gastos Personales en el Sector Retail por Categoría en EE. UU. en 1960',
+         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
+         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
+
+
+htmltools::save_html(fig_pie, file="images/fig_pie.html")
+
+```
+
+
+.center[
+<iframe src="images/fig_pie.html" allowtransparency="true" height="450" width="1100" scrolling="yes" seamless="seamless" frameBorder="0" data-external="1"> </iframe>
+]
+
+
+---
+
+
+#  `r icon("chart-bar")` Gráficos interactivos
+
+### Gráficos descriptivos (Línea)
+
+Serie histórica de rentabilidad
+
+```{r echo=FALSE, message=FALSE, warning=FALSE }
+library(plotly)
+today <- Sys.Date()
+tm <- seq(0, 600, by = 10)
+Fecha <- today - tm
+Rentabilidad <- rnorm(length(Fecha),5,3)
+fig.series <- plot_ly(x = ~Fecha, y = ~Rentabilidad, mode = 'lines')
+
+htmltools::save_html(fig.series, file="images/fig.series.html")
+```
+
+.center[
+<iframe src="images/fig.series.html" allowtransparency="true" height="450" width="1100" scrolling="yes" seamless="seamless" frameBorder="0" data-external="1"> </iframe>
+]
+
+
+---
+
+
+
+
+
+#  `r icon("chart-bar")` Gráficos interactivos
+
+### GGPLOT2 ➡️ plotly::ggplotly()
+
+
+
+
+.pull-left[
+
+```{r echo=FALSE, message=FALSE, warning=FALSE , fig.height = 5  }
+# Libraries
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(viridis)
+library(hrbrthemes)
+library(gapminder)
+
+# Filtra los datos y crea la columna text
+data <- gapminder %>% 
+  filter(year == "2007") %>% 
+  dplyr::select(-year) %>%
+  mutate(gdpPercap = round(gdpPercap, 0),
+         pop = round(pop / 1000000, 2),
+         lifeExp = round(lifeExp, 1),
+         text = paste("Country:", country, "\nPopulation (M):", pop,
+                      "\nLife Expectancy:", lifeExp, "\nGdp per capita:", gdpPercap))
+
+# Crear el gráfico de burbuja en ggplot
+bubble <- ggplot(data, aes(x = gdpPercap, y = lifeExp, size = pop, color = continent, text = text)) +
+  geom_point(alpha = 0.7) +
+  scale_size(range = c(1.4, 19), name = "Population (M)") +
+  scale_color_viridis(discrete = TRUE, guide = FALSE) +
+  theme_ipsum() +
+  theme(legend.position = "none")
+
+bubble
+
+# turn ggplot interactive with plotly
+#pp <- ggplotly(p, tooltip="text")
+#pp
+
+# save the widget
+# library(htmlwidgets)
+# saveWidget(pp, file=paste0( getwd(), "/HtmlWidget/ggplotlyBubblechart.html"))
+```
+
+
+
+]
+
+
+.pull-right[
+
+
+```{r echo=FALSE, message=FALSE, warning=FALSE }
+library(ggplot2)
+library(dplyr)
+library(plotly)
+library(viridis)
+library(hrbrthemes)
+
+# The dataset is provided in the gapminder library
+library(gapminder)
+data <- gapminder %>% filter(year=="2007") %>% dplyr::select(-year)
+
+# Interactive version
+bubble <- data %>%
+  mutate(gdpPercap=round(gdpPercap,0)) %>%
+  mutate(pop=round(pop/1000000,2)) %>%
+  mutate(lifeExp=round(lifeExp,1)) %>%
+  
+  # Reorder countries to having big bubbles on top
+  arrange(desc(pop)) %>%
+  mutate(country = factor(country, country)) %>%
+  
+  # prepare text for tooltip
+  mutate(text = paste("Country: ", country, "\nPopulation (M): ", pop, "\nLife Expectancy: ", lifeExp, "\nGdp per capita: ", gdpPercap, sep="")) %>%
+  
+  # Classic ggplot
+  ggplot( aes(x=gdpPercap, y=lifeExp, size = pop, color = continent, text=text)) +
+    geom_point(alpha=0.7) +
+    scale_size(range = c(1.4, 19), name="Population (M)") +
+    scale_color_viridis(discrete=TRUE, guide=FALSE) +
+    theme_ipsum() +
+    theme(legend.position="none")
+
+fig.bubble <- ggplotly(bubble, tooltip="text")
+
+htmltools::save_html(fig.bubble, file="images/fig.bubble.html")
+```
+
+.center[
+<iframe src="images/fig.bubble.html" allowtransparency="true" height="450" width="1100" scrolling="yes" seamless="seamless" frameBorder="0" data-external="1"> </iframe>
+]
+
+
+
+
+]
+
+
+---
+
+
+
+class: center, middle
+
+#  `r icon("chart-bar")` 
+# Dashboards
+----
+
+
+
+---
+
+
+
+
+background-image: url(images/Dash_1.png)
+background-size: contain
+
+
+
+---
+
+
+
+
+background-image: url(images/Dash_2.png)
+background-size: contain
+
+
+
+---
+
+
+
+
+background-image: url(images/Dash_3.png)
+background-size: contain
+
+
+---
+
+
+
+
+
+background-image: url(images/Dash_4.png)
+background-size: contain
+
+

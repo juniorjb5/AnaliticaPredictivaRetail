@@ -1,0 +1,343 @@
+---
+title: "04-Metodologias"
+author: "Orlando Joaqui Barandica"
+date: "27/10/2024"
+output: html_document
+---
+
+
+```{r, include = FALSE}
+library(knitr)                              # paquete que trae funciones utiles para R Markdown
+library(tidyverse)                          # paquete que trae varios paquetes comunes en el tidyverse
+library(datos)                              # paquete que viene con datos populares traducidos al español :)
+library(shiny)
+# opciones predeterminadas
+knitr::opts_chunk$set(echo = FALSE,         # FALSE: los bloques de código NO se muestran
+                      dpi = 300,            # asegura gráficos de alta resolución
+                      warning = FALSE,      # los mensajes de advertencia NO se muestran
+                      error = FALSE)        # los mensajes de error NO se muestran
+
+
+options(htmltools.dir.version = FALSE)
+```
+
+
+class: middle
+background-image: url("images/4.png")
+background-size: cover
+
+
+
+.pull-left-narrow[
+
+
+
+]
+
+.pull-right-wide[
+
+# Metodologías de Modelación en Retail
+----
+
+]
+
+---
+
+class: center, middle, inverse
+background-image: url(https://media.giphy.com/media/YK257LnLWgGR2/giphy.gif)
+background-size: cover
+
+# ¿Cómo proceden los analistas en el análisis de problemas en el sector Retail?
+
+# Es decir, ¿cuál es su metodología?
+
+---
+
+# Metodología
+
+.font140[
+> 1. .orange[Planteamiento de la teoría o hipótesis.]
+
+> 2. Especificación del modelo matemático de la teoría.
+
+> 3. .orange[Especificación del modelo estadístico.]
+
+> 4. Obtención de datos.
+
+> 5. .orange[Estimación de los parámetros del modelo.]
+
+> 6. Pruebas de hipótesis.
+
+> 7. .orange[Pronóstico o predicción.]
+
+> 8. Uso del modelo para decisiones estratégicas.
+]
+
+---
+
+# 1. Planteamiento de la teoría o hipótesis
+
+## Keynes plantea:
+
+.font120[.orange[La ley psicológica fundamental… consiste en que los hombres [y las mujeres], como regla general y en promedio, están dispuestos a incrementar su consumo a medida que aumenta su ingreso, pero no en la misma cuantía del aumento en su ingreso.]]
+
+
+.pull-left[
+----
+### En otras palabras, proponemos que la *propensión marginal a consumir (PMC)* en el retail es mayor que cero, pero menor que uno.
+----
+
+
+
+
+
+]
+
+
+
+
+.pull-right[
+.center[
+<img src="https://media.giphy.com/media/3o6gDWzmAzrpi5DQU8/giphy.gif" width="80%"/>
+]]
+
+---
+
+# 2. Especificación del modelo matemático
+
+## Modelo de consumo en Retail:
+
+.font120[.green[Aunque se plantea una relación positiva entre ingreso y gasto en retail, no se especifica la forma exacta de la relación. Un modelo matemático simple sería:]]
+
+.font140[$$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso$$]
+
+- $Retail_{Gasto}$ = Gasto en retail.
+- $Ingreso$ = ingreso disponible del consumidor. 
+- La pendiente $\beta_1$ mide la PMC en retail.
+
+.center[
+### Este modelo sugiere que el gasto en retail está relacionado linealmente con el ingreso.
+]
+
+---
+
+# 3. Especificación del modelo estadístico
+
+.font120[Para reflejar la variabilidad en el gasto de retail que no está explicada por el ingreso, el modelo se ajusta con un término de error:]
+
+<br>
+
+.font140[$$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso + u$$]
+
+- $u$: Término de error
+Variable aleatoria que representa factores adicionales que influyen en el gasto en retail.
+
+<br>
+
+.font140[*El término de error $u$ representa* **.orange[todos los factores]** *que afectan el gasto en retail pero que no están en el modelo explícitamente.*]
+
+---
+
+# 4. Obtención de datos
+
+.font140[Para estimar el modelo, necesitamos datos históricos de ingreso disponible y gasto en retail.]
+
+.pull-left[
+<br>
+
+----
+
+.orange[.font160[Ejemplo:]] .font110[datos trimestrales de gasto en retail e ingreso de los consumidores en EE.UU. de 2010 a 2020.]
+----
+
+]
+
+.pull-right[
+.center[
+<img src="https://media.giphy.com/media/BombwjrdBX0hDTvhZ5/giphy.gif" width="60%"/>
+]]
+
+---
+
+# 5. Estimación de los parámetros del modelo
+
+.font120[Aplicando análisis de regresión, obtenemos estimaciones de] $\beta_0$ y $\beta_1$. .font120[Un posible resultado podría ser:]
+
+<br>
+
+.font140[$$\hat{Retail_{Gasto}} = 200 + 0.6 \cdot Ingreso$$]
+
+> La PMC estimada en retail (0.6) indica que:
+
+<br>
+
+### Cada dólar adicional de ingreso genera un aumento de 60 centavos en el gasto en retail, en promedio.
+
+---
+
+# 6. Pruebas de Hipótesis
+
+.font120[Si el modelo representa adecuadamente la realidad, es posible evaluar si la PMC estimada es consistente con la teoría económica de consumo en retail.]
+
+<br>
+
+.center[
+## Esperamos que la PMC sea positiva y menor que 1.
+]
+
+.font120[.orange[**En el ejemplo, observamos que la PMC en retail es 0.6.** Antes de aceptar este valor, verificamos si es estadísticamente menor que 1, asegurando que el efecto no es un artefacto de los datos o el azar.]]
+
+---
+
+# 7. Pronóstico o predicción
+
+.font120[Supongamos que queremos proyectar el gasto en retail para un trimestre con un ingreso disponible de $50,000.]
+
+<br>
+
+$$\hat{Retail_{Gasto_{Sgte}}} = 200 + 0.6 \cdot (50,000) = 30,200$$
+
+
+> Con ese ingreso, el gasto en retail proyectado es de $30,200.
+
+---
+
+# 8. Uso del modelo para decisiones estratégicas
+
+.center[
+<img src="https://media.giphy.com/media/3o7qDSOvfaCO9b3MlO/giphy.gif" width="40%"/>
+]
+
+.center[
+### Este modelo ayuda a prever el gasto en retail y a ajustar estrategias de marketing y ventas, basándose en las tendencias de ingreso de los consumidores.
+]
+
+
+
+---
+
+
+
+# Metodología CRISP-DM
+
+
+### 1. Entendimiento del Negocio
+
+- **Objetivo**: Identificar cómo el ingreso afecta el gasto en retail.
+
+- **Hipótesis**: A mayor ingreso, mayor gasto en retail, pero no en igual proporción.
+
+- **PMC**: Proporción de ingreso adicional que se destina al retail.
+
+----
+
+### 2. Entendimiento de los Datos
+
+- **Variables clave**:
+    - Ingreso disponible de los consumidores
+    - Gasto en retail
+    
+- **Datos**: Registros trimestrales de 2010 a 2020
+
+---
+
+
+# Metodología CRISP-DM
+
+
+
+### 3. Preparación de los Datos
+
+- **Limpieza**: Valores faltantes, errores en datos.
+
+- **Transformación**: Ajuste por inflación para comparabilidad.
+
+- **PMC**: Columna de gasto en retail como proporción del ingreso.
+
+----
+
+### 4. Modelado
+
+- **Modelo**: Regresión Lineal Simple
+
+$$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso + u$$
+
+$\beta_1$: Propensión Marginal a Consumir (PMC) en retail.
+
+---
+
+
+# Metodología CRISP-DM
+
+
+
+
+### 5. Evaluación del Modelo
+
+- **Interpretación**:
+    - $\beta_0$: Gasto básico en retail.
+    - $\beta_1$: Incremento en gasto por cada dólar adicional de ingreso.
+    
+- **Ejemplo de estimación**:
+
+$$\hat{Retail_{Gasto}} = 200 + 0.6 \cdot Ingreso$$
+
+----
+
+### 6. Despliegue del Modelo
+
+- **Aplicación**: Proyección de gastos en retail para decisiones estratégicas.
+
+- **Ejemplo**: Si Ingreso = $50,000 → Gasto proyectado = $30,200
+
+- **Uso en retail**: Planificación de inventario y marketing.
+
+---
+
+
+
+# Comparación de Metodologías: Económica vs. CRISP-DM
+
+
+.pull-left[
+### Metodología Económica
+- **Enfoque**: Explicación teórica del consumo (PMC).
+- **Modelo**: Regresión para analizar la relación ingreso-gasto.
+- **Aplicación**: Evaluación de hipótesis y teorías macroeconómicas.
+- **Ventaja**: Proporciona una comprensión profunda de la lógica económica.
+- **Desventaja**: Menos adaptada a la manipulación de grandes volúmenes de datos.
+]
+
+.pull-right[
+### CRISP-DM
+- **Enfoque**: Procesos de análisis de datos orientados a decisiones.
+- **Modelo**: Estructura flexible para procesamiento, limpieza y modelado.
+- **Aplicación**: Permite iteraciones rápidas y extracción de insights prácticos.
+- **Ventaja**: Adaptabilidad a grandes datasets y resultados aplicables.
+- **Desventaja**: Puede carecer de una base teórica profunda.
+]
+
+---
+
+
+
+
+class: middle
+
+.center[
+
+# Diferencia Principal: 
+
+
+.font120[**La metodología económica** se centra en explicar el .orange[**"por qué"**] desde una base teórica, mientras que **CRISP-DM** se enfoca en el .orange[**"cómo"**] aplicando datos de forma práctica y flexible.
+
+]]
+
+
+
+
+
+
+
+
+

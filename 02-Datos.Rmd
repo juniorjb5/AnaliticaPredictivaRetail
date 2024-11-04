@@ -1,0 +1,491 @@
+---
+title: "02-Datos"
+author: "Jota"
+date: "2024-11-01"
+output: html_document
+---
+
+
+
+
+class: middle
+background-image: url("images/2.png")
+background-size: cover
+
+
+
+.pull-left-narrow[
+
+
+
+]
+
+.pull-right-wide[
+
+# Datos en la Analítica de Negocios
+----
+
+]
+
+---
+
+
+
+
+# ¿Qué es BIG DATA en Retail?
+
+<br>
+
+### El .orange[BIG DATA] en retail es el análisis masivo de datos comerciales. 
+
+<br>
+
+.right[
+.font140[
+Una gran cantidad de datos generados por interacciones con clientes, inventario y ventas, que las aplicaciones de software tradicionales no pueden procesar en tiempo real para obtener información valiosa.
+]
+]
+
+<br>
+
+`r anicon::faa("angle-double-right", animate = "passing", size = 2)` Este término también se refiere a las .orange[nuevas tecnologías] que permiten el **almacenamiento y procesamiento de estos datos** y al uso de la información obtenida para mejorar la experiencia del cliente y optimizar las operaciones.
+
+---
+
+background-image: url(images/back5.jpg)
+background-size: cover
+
+# .orange[¿De dónde vienen los datos en Retail?]
+
+.pull-left[
+
+<br>
+<br>
+<br>
+<br>
+
+## Producidos por clientes
+
+]
+
+.pull-right[
+
+.center[
+.font140[Realizar una compra en línea, interactuar con la página web de la tienda, completar una encuesta de satisfacción, suscribirse a un boletín, utilizar una tarjeta de fidelidad, responder a promociones...
+]
+
+### Cada una de estas acciones genera datos valiosos para entender las preferencias y el comportamiento del cliente.
+
+]
+
+]
+
+---
+
+background-image: url(images/back5.jpg)
+background-size: cover
+
+# .orange[¿De dónde vienen los datos en Retail?]
+
+.pull-left[
+
+<br>
+<br>
+<br>
+<br>
+
+## Entre dispositivos y <br> sistemas
+
+]
+
+.pull-right[
+
+.center[
+.font140[Los sistemas de punto de venta, sensores de inventario, cámaras de seguridad, lectores de códigos de barras, y dispositivos móviles...
+]
+
+### Todos estos dispositivos recogen y envían datos en tiempo real, facilitando la gestión del inventario, la logística y la personalización de la experiencia del cliente.
+
+]
+
+]
+
+---
+
+background-image: url(images/back5.jpg)
+background-size: cover
+
+# .orange[¿De dónde vienen los datos en Retail?]
+
+.pull-left[
+
+<br>
+<br>
+<br>
+<br>
+
+## Datos de comportamiento <br> de compra
+
+]
+
+.pull-right[
+
+.center[
+.font140[Los datos capturados sobre los hábitos de compra, como productos preferidos, frecuencia de compra, respuestas a descuentos y promociones...
+]
+
+### Este tipo de datos permite a los retailers optimizar las estrategias de marketing y prever la demanda de productos específicos.
+
+]
+
+]
+
+---
+
+background-image: url(images/back5.jpg)
+background-size: cover
+
+# .orange[¿De dónde vienen los datos en Retail?]
+
+.pull-left[
+
+<br>
+<br>
+<br>
+<br>
+
+## Datos de comercio <br> electrónico
+
+]
+
+.pull-right[
+
+.center[
+.font140[Datos generados a partir de las transacciones en línea, como añadir productos al carrito, completar una compra, utilizar cupones y seleccionar opciones de envío...
+]
+
+### Estos datos son esenciales para analizar patrones de compra en línea y mejorar la experiencia del usuario en plataformas digitales.
+
+]
+
+]
+
+---
+
+background-image: url(images/back5.jpg)
+background-size: cover
+
+# .orange[¿De dónde vienen los datos en Retail?]
+
+.pull-left[
+
+<br>
+<br>
+<br>
+<br>
+
+## Transacciones de <br> datos financieros
+
+]
+
+.pull-right[
+
+<br>
+<br>
+
+.center[
+.font140[Pagos con tarjetas de crédito, transacciones en efectivo en tiendas físicas, devoluciones y reembolsos, financiamiento de productos...
+]
+
+]
+
+]
+
+---
+
+class: middle, center
+
+# .purple[Para que te hagas una idea...]
+
+<br>
+
+## .orange[...y centrándonos solo en el sector retail, en un solo día típico]
+
+<br>
+
+.gray[Se completan millones de transacciones en línea, se envían miles de correos electrónicos promocionales, se realizan interacciones con aplicaciones móviles, y se producen compras en tiendas físicas y en línea en un nivel masivo.]
+
+---
+
+background-image: url(images/back6.jpg)
+background-size: cover
+
+# Tipos de datos según su estructura
+
+## Datos estructurados
+
+.pull-left[
+
+]
+
+.pull-right[
+
+.center[
+### - Son los datos con formato definido, como las ventas diarias, inventario, precios y registros de clientes.
+
+### - Se pueden almacenar en tablas y son ideales para análisis rápidos y específicos.
+
+### - Incluyen números, fechas y otros valores definidos.
+]
+
+]
+
+---
+
+background-image: url(images/back7.jpg)
+background-size: cover
+
+# Tipos de datos según su estructura
+
+## Datos no estructurados
+
+.pull-left[
+
+]
+
+.pull-right[
+
+.center[
+### - Datos en su forma original sin un formato definido, como opiniones de clientes, reseñas y fotos de productos.
+
+### - Son difíciles de analizar sin procesamiento previo.
+
+### - Incluyen emails, chats, redes sociales y comentarios de productos.
+]
+
+]
+
+---
+
+
+
+class: center, middle
+
+
+
+# El ciclo de gestión de información en 4 fases
+
+# 👨‍💻
+--
+
+<br>
+
+### .orange[Conoces ya de dónde vienen los datos, los tipos de ellos que existen y sus características principales. Lo siguiente es cómo gestionarlos]
+
+
+
+---
+
+
+# 1️⃣ Captura de información
+
+
+<br>
+<br>
+<br>
+<br>
+
+.center[
+## ¿Dónde está la información que necesitamos y cómo podemos capturarla?
+
+## 🔍
+]
+
+
+
+
+---
+
+
+
+# 1️⃣ Captura de información
+
+
+<br>
+
+.center[
+.font140[Cómo hemos comentado... .brand-red[**HAY INFORMACIÓN POR TODAS PARTES.**]]
+]
+
+<br>
+
+### Para capturarla, existen varios métodos como:
+
+> - .orange[*Web Scraping:*] Una técnica que mediante programas de software extrae información de sitios web.
+
+> - .orange[*API's:*] La gestión de información a través de diversar API creadas, permite la comunicación entre diversos componentes de software.
+
+> - .orange[*Apache Flume:*] Específicamente diseñado para recopilar y agregar grandes volúmenes de datos.
+
+> - .orange[*...*]
+
+
+
+---
+
+
+# 2️⃣ Almacenamiento
+
+
+<br>
+<br>
+<br>
+<br>
+
+.center[
+## Capturados los datos necesitarás guardarlos!!!
+
+## 💾
+]
+
+
+
+
+---
+
+
+# 2️⃣ Almacenamiento
+
+
+<br>
+
+.center[
+.font140[Depende de su uso futuro... .brand-red[**Y EL TIPO DE INFORMACIÓN QUE SE TRATE.**]]
+]
+
+<br>
+
+### Se pueden guardar en:
+
+> - .orange[*Hojas de cálculo:*] Para el manejo de información estructurada tradicional.
+
+> - .orange[*NoSQL:*] Permite almacenamiento de información no estructurada de forma mucho más flexible y rápida.
+
+> - .orange[*Hadoop:*] Entornos de trabajo como Hadoop, ayudarán a ejecutar aplicaciones necesarias para trabajar con macrodatos.
+
+> - .orange[*...*]
+
+
+---
+
+
+# 3️⃣ Tratamiento
+
+
+<br>
+<br>
+<br>
+<br>
+
+.center[
+## Capturados y almacenados los datos, ¿ahora cómo los tratamos?
+
+## 🔨
+]
+
+
+
+
+---
+
+
+# 3️⃣ Tratamiento
+
+
+<br>
+
+
+### Se puede extraer conocimiento y buscar patrones repetitivos de esos datos a través de **la estadística** y **el machine learning** (desarrollo de tpecnicas que tienen como objetivo que las máquinas generalicen su comportamiento con base a datos de entrenamiento):
+
+
+> - .orange[*Python:*] Construir aplicaciones web, analizar datos, automatizar operaciones y crear aplicaciones empresariales.
+
+> - .orange[*R:*] es un entorno de software libre y lenguaje de programación interpretado, es decir, ejecuta las instrucciones directamente, sin una previa compilación del programa a instrucciones en lenguaje máquina.
+
+> - .orange[*Apache Spark:*] Es un motor unificado de analíticas para procesar datos a gran escala que integra módulos para SQL, streaming, aprendizaje automático y procesamiento de grafos.
+
+> - .orange[*...*]
+
+
+
+
+---
+
+# 4️⃣ Puesta en valor
+
+
+<br>
+<br>
+<br>
+<br>
+
+.center[
+## Ahora a darle valor a los datos!!!
+
+## 💰
+]
+
+
+
+
+---
+
+
+
+# 4️⃣ Puesta en valor
+
+
+<br>
+
+.center[
+.font140[Los datos en sí mismos... .brand-red[**NO GARANTIZAN CONOCIMIENTO.**]]
+]
+
+<br>
+
+### Sin un análisis y un tratamiento adecuado, los datos no sirven para nada. Así el valor estará, no en los propios datos, sino en la relación de estos entre sí.
+
+> - .orange[*Patrones o tendencias*]
+
+> - .orange[*Estimaciones, Correlaciones, Predicciones, ...*]
+
+> - .orange[*Tablas y visualizaciones*]
+
+> - .orange[*...*]
+
+
+
+
+---
+
+
+background-image: url(images/back9.jpg)
+background-size: cover
+class: inverse, center, bottom
+
+
+
+## Está en todas partes...
+
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+## y todavía no hay tantos expertos como demanda de éstos, que sigue en aumento imparable. Por tanto, ha llegado el momento de los datos a gran escala.
