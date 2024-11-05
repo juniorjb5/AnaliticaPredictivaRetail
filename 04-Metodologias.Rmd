@@ -225,7 +225,6 @@ $$\hat{Retail_{Gasto_{Sgte}}} = 200 + 0.6 \cdot (50,000) = 30,200$$
 
 - **Objetivo**: Identificar cómo el ingreso afecta el gasto en retail.
 
-- **Hipótesis**: A mayor ingreso, mayor gasto en retail, pero no en igual proporción.
 
 - **PMC**: Proporción de ingreso adicional que se destina al retail.
 

@@ -129,24 +129,6 @@ ggcorrplot(cor_matrix, lab = TRUE, type = "lower", title = "Matriz de Correlaci�
 
 ---
 
-# Análisis de regresión lineal
-
-<br>
-
-El análisis de regresión se relaciona en gran medida con la estimación o predicción de la .orange[**media (de la población) o valor promedio de la variable dependiente,**] con base en los valores conocidos o fijos de las variables explicativas.
-
-<br>
-
-> Las observaciones de la variable $Y$ (dependiente) se asumen aleatorias de una distribución con media $E(Y|X=x)$. 
-
-> Las desviaciones de las observaciones $y_i$ de la $E(Y|X=x)$ se tienen en cuenta adicionando un error aleatorio $u_i$ al siguiente modelo:
-
-.font180[$$y_i = \beta_0 + \beta_1 x_i + e_i$$]
-
-
----
-
-
 
 name: MCO
 class: center, middle
@@ -216,42 +198,6 @@ $$SCE = \sum_{i=1}^n (y_i - \hat{y}_i)^2$$
 
 ---
 
-# MCO
-
-### Minimizar SCE:
-
-$$SCE = \sum_{i=1}^n (y_i - \hat{y}_i)^2 = \sum_{i=1}^n (y_i - (\hat{\beta_0} + \hat{\beta_1}x_i))^2$$
-
-
-$$Min SCE =  \frac{\partial SCE}{\partial \hat{\beta_j}}$$
-
---
-
-.font140[.orange[A partir de las ecuaciones normales se llega a:]]
-
-.pull-left[
-
-$$\hat{\beta_0} = \bar{y} - \hat{\beta_1}\bar{x}$$
-
-]
-
-
-.pull-right[
-
-
-$$\begin{align}
-\hat{\beta_1} & = & \frac{\sum_{i=1}^n x_i y_i - n \bar{x}\bar{y}}{\sum_{i=1}^n x_i^2 - n\bar{x}^2}   \nonumber \\
- & = & r \left( \frac{S_y}{S_x}\right)  \nonumber \\
- & = & \frac{cov(x,y)}{V(x)}
-\end{align}$$
-
-
-]
-
-
-
-
----
 
 
 #MCO 
@@ -305,7 +251,7 @@ summary(modelo1)
 
 - Luego, el cambio que se predice para las ventas en función del cambio en el tamaño se expresa como: 
 
-$$\vartriangle \hat{Ventas} = 0.04 (\vartriangle Tamaño)$$
+$$\vartriangle \hat{Ventas} = - 0.04 (\vartriangle Tamaño)$$
 
 
 ]
@@ -345,64 +291,7 @@ Indica que por cada unidad (cm3) adicional en el tamaño del producto, el númer
 ---
 
 
-# Estimación por Intervalos
-
-
-Si se cumplen los supuestos del modelo de regresión lineal, entonces la distribución del estimador de MCO es normal y se puede utilizar para construir intervalos de confianza y hacer pruebas de hipótesis.
-
-<br>
-<br>
-
-----
-
-.center[
-
-### Intervalos de Confianza para los Coeficientes
-
-Un intervalo de confianza para un coeficiente $\beta_j$ es un rango de valores dentro del cual se espera que esté el verdadero valor del coeficiente con una cierta probabilidad.
-
-]
-
-
-----
-
----
-
-
-# Intervalos de confianza para los coeficientes de regresión $\beta_0$ y $\beta_1$
-
-
-.pull-left[
-
-Un intervalo de confianza del $(1-\alpha)100%$ para el coeficiente de regresión $\beta_1$ está dado por:
-
-$$\hat{\beta}_1 \pm t_{\alpha/2, n-2} \frac{\hat{\sigma}}{\sqrt{\sum_{i=1}^{n}(x_{i1}-\bar{x}_1)^2}}$$
-
-El intervalo de confianza para el coeficiente de regresión $\beta_0$ es:
-
-$$\hat{\beta}_0\pm t_{\alpha/2,n-2}\hat{\sigma}\sqrt{\frac{1}{n}+\frac{\bar{x}^2}{\sum_{i=1}^{n}(x_i-\bar{x})^2}}$$
-
-]
-
-.pull-right[
-
-En ambos casos, $t_{\alpha/2,n-2}$ es el valor crítico de la distribución $t$ de Student con $n-2$ grados de libertad y un nivel de significancia $\alpha$.
-
-La estimación del error estándar $\hat{\sigma}$ se calcula como:
-
-$$\hat{\sigma}=\sqrt{CME}=\sqrt{\frac{\sum_{i=1}^{n}(y_i-\hat{y}_i)^2}{n-2}}$$
-
-El intervalo de confianza nos indica que con un nivel de confianza de $1-\alpha$, el verdadero valor del coeficiente de regresión está contenido en el intervalo de confianza calculado.
-
-]
-
-.orange[**Nota:** Recuerda que] $t_{\alpha/2, n-2}$ .orange[es el valor crítico de la distribución] $t$ .orange[de Student con] $n-2$ .orange[grados de libertad, que deja una probabilidad de] $\alpha/2$ .orange[en la cola superior y] $\alpha/2$ .orange[en la cola inferior.]
-
-
-
----
-
-# En R...
+# Intervalos de confianza en R
 
 .pull-left[
 
@@ -446,6 +335,7 @@ product_size -0.05083797 -0.03159227
 
 
 ---
+
 
 
 
@@ -510,23 +400,7 @@ El valor p es la probabilidad de obtener un valor del estadístico de prueba tan
 
 ---
 
-# En R...
 
-Supongamos que tenemos un modelo de regresión lineal simple con una variable explicativa $x$ y una variable respuesta $y$. Queremos probar las siguientes hipótesis sobre los coeficientes de regresión:
-
-<br>
-
-> $H_0: \beta_1 = 0$ (la variable explicativa no tiene efecto sobre la variable respuesta)
-
-> $H_1: \beta_1 \neq 0$ (la variable explicativa sí tiene efecto sobre la variable respuesta)
-
-<br>
-
-Podemos realizar la prueba de hipótesis utilizando la función `summary()` en R después de ajustar el modelo de regresión lineal simple. 
-
-> La función `summary()` proporciona información sobre el modelo, incluyendo el valor del estadístico de prueba, el valor $p$ y el intervalo de confianza para los coeficientes de regresión.
-
----
 
 # En R...
 
@@ -537,7 +411,7 @@ Podemos realizar la prueba de hipótesis utilizando la función `summary()` en R
 
 `summary(modelo1)`
 
-* Dado que el valor $p$ (9.38e-10) es menor que cualquier nivel de significancia común, podemos rechazar la hipótesis nula y concluir que hay evidencia suficiente para afirmar que la variable Tamaño *(product_size)* tiene un efecto significativo en las Ventas *(sales_performance)*.
+* Dado que el *valor-p* (9.38e-10) es menor que cualquier nivel de significancia común, podemos rechazar la hipótesis nula y concluir que hay evidencia suficiente para afirmar que la variable Tamaño *(product_size)* tiene un efecto significativo en las Ventas *(sales_performance)*.
 
 ]
 
@@ -604,50 +478,10 @@ Donde $\hat{\beta_0}$ y $\hat{\beta_1}$ son las estimaciones de los parámetros 
 
 ---
 
-# Predicción
-
-## Intervalo de confianza para la predicción
-
-Un intervalo de confianza para una nueva observación de $Y$ en el punto $X_0$ está dado por:
-
-$$\hat{Y}_0 \pm t_{\alpha/2,n-2} \cdot \hat{\sigma} \sqrt{1 + \frac{1}{n} + \frac{(x_0-\bar{x})^2}{\sum_{i=1}^n (x_i - \bar{x})^2}}$$
-
-
-Donde:
-
-$\hat{Y}_0$ es la predicción puntual de $Y$ en $X_0$.
-
-$t_{\alpha/2,n-2}$ es el valor crítico de $t$ con $(n-2)$ grados de libertad y un nivel de confianza $(1-\alpha)$.
-
-$n$ es el tamaño de la muestra.
-
-$\bar{X}$ es la media de las observaciones de $X$.
-
-El intervalo de confianza nos indica el rango de valores en el que podemos esperar que caiga una nueva observación de $Y$ con una probabilidad $(1-\alpha)$.
-
----
 
 # Predicción
 
-## Intervalo de confianza para la predicción
-
-Un intervalo de confianza para una nueva observación de $Y$ en el punto $X_0$ está dado por:
-
-$$\hat{Y}_0 \pm t_{\alpha/2,n-2} \cdot \hat{\sigma} \sqrt{1 + \frac{1}{n} + \frac{(x_0-\bar{x})^2}{\sum_{i=1}^n (x_i - \bar{x})^2}}$$
-
-
-.orange[**Intervalo de predicción:**] Se utiliza cuando la ecuación de regresión se emplea para predecir una Y individual para un valor de X dado.
-
-
-.orange[**Ejemplo:**] Estimar el salario de un ejecutivo minorista en particular con
-20 años de experiencia.
-
-
----
-
-
-
-# En R...
+## Intervalo de confianza para la predicción en R
 
 
 <br>
@@ -862,8 +696,8 @@ $$
 
 - En este modelo, hemos incluido una **variable categórica**: `sales_channel`, que toma los valores **0** y **1**.
 - Esta variable representa el **canal de venta**:
-  - **0**: Tienda Física
-  - **1**: En Línea
+  - **0**: En Línea
+  - **1**: Tienda Física
 
 
 ]
@@ -878,7 +712,7 @@ $$
  - Mide el cambio promedio en las `Ventas` por cada unidad adicional en el tamaño del producto.
    
 **Coeficiente de `sales_channel`** $\beta_2$:
- - Muestra la diferencia en las `Ventas` entre el canal de venta en línea (1) y el canal de tienda física (0).
+ - Muestra la diferencia en las `Ventas` entre el canal de venta en tienda física (1) y el canal en línea (0).
 
 
 
@@ -932,7 +766,7 @@ summary(modelo2)
 
 .pull-right[
 
-> **El coeficiente de 1.83** sugiere que el canal en línea tiende a tener un promedio de ventas 1.83 unidades mayor que el canal en tienda física.
+> **El coeficiente de 1.83** sugiere que el canal físico tiende a tener un promedio de ventas 1.83 unidades mayor que el canal en línea.
 
 ----
 

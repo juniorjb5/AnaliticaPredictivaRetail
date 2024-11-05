@@ -115,6 +115,7 @@ class: about-me, middle, center
 
 
 
+
 ```{r 02-Datos, child="02-Datos.Rmd"}
 ```
 
@@ -147,6 +148,41 @@ class: about-me, middle, center
 
 ```{r 06-Caso, child="06-Caso.Rmd"}
 ```
+
+
+---
+
+
+
+background-image: url("images/Imagen1.png")
+background-size: cover
+
+
+# Bonus track - Simulación
+
+
+.pull-left[
+
+
+### ¿Cuánto estarías dispuesto a pagar por una taza de este café especial?
+
+<br>
+
+### ¿Con qué frecuencia consumirías este café? (Cuántas tazas por mes)
+
+<br>
+
+### ¿Preferirías consumir este café en casa o en una cafetería?
+
+]
+
+
+
+.pull-right[
+
+
+
+]
 
 
 

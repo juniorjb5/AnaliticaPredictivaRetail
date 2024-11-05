@@ -84,15 +84,6 @@ class: center, middle
 
 # Ciencia + Arte
 
---
-
-### Esta comunicación humana es la forma en que nuestro tranquilo trabajo cuantitativo se convierte en un generador de ingresos trascendente o en una estrategia de producción. Incluso si planeamos implementar algoritmos y nunca compartir nuestro trabajo fuera de nuestra propia empresa, la capacidad de explicar y comunicar es muy importante.
-
-
-.font100[
-`r icon::fa("link", animate = "passing")` [Dashboard - Corporate Social Responsibility Barometer, an app of text mining.](https://juniorjb5.shinyapps.io/Value_at_Risk/)
-]
-
 
 
 ---
