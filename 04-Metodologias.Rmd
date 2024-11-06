@@ -43,15 +43,6 @@ background-size: cover
 
 ---
 
-class: center, middle, inverse
-background-image: url(https://media.giphy.com/media/YK257LnLWgGR2/giphy.gif)
-background-size: cover
-
-# ¿Cómo proceden los analistas en el análisis de problemas en el sector Retail?
-
-# Es decir, ¿cuál es su metodología?
-
----
 
 # Metodología
 
@@ -217,6 +208,11 @@ $$\hat{Retail_{Gasto_{Sgte}}} = 200 + 0.6 \cdot (50,000) = 30,200$$
 ---
 
 
+background-image: url("images/crispdm.png")
+background-size: cover
+
+
+.pull-left[
 
 # Metodología CRISP-DM
 
@@ -238,8 +234,23 @@ $$\hat{Retail_{Gasto_{Sgte}}} = 200 + 0.6 \cdot (50,000) = 30,200$$
     
 - **Datos**: Registros trimestrales de 2010 a 2020
 
+
+]
+
+
+.pull-right[
+
+
+]
+
 ---
 
+
+background-image: url("images/crispdm.png")
+background-size: cover
+
+
+.pull-left[
 
 # Metodología CRISP-DM
 
@@ -263,11 +274,27 @@ $$Retail_{Gasto} = \beta_0 + \beta_1 \cdot Ingreso + e$$
 
 $\beta_1$: Propensión Marginal a Consumir (PMC) en retail.
 
+
+]
+
+
+
+.pull-right[
+
+
+]
+
+
 ---
 
 
-# Metodología CRISP-DM
+background-image: url("images/crispdm.png")
+background-size: cover
 
+
+.pull-left[
+
+# Metodología CRISP-DM
 
 
 
@@ -289,7 +316,15 @@ $$\hat{Retail_{Gasto}} = 200 + 0.6 \cdot Ingreso$$
 
 - **Ejemplo**: Si Ingreso = $50,000 → Gasto proyectado = $30,200
 
-- **Uso en retail**: Planificación de inventario y marketing.
+
+
+]
+
+.pull-right[
+
+
+]
+
 
 ---
 

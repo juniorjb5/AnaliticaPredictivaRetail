@@ -1,9 +1,9 @@
 <!DOCTYPE html>
 <html lang="" xml:lang="">
   <head>
-    <title>Análitica predictiva en Retail</title>
+    <title>Análitica predictiva en Retail: Usando R</title>
     <meta charset="utf-8" />
-    <meta name="author" content="Orlando Joaqui-Barandica, PhD" />
+    <meta name="author" content="Orlando Joaqui Barandica" />
     <script src="libs/header-attrs/header-attrs.js"></script>
     <link href="libs/remark-css/default.css" rel="stylesheet" />
     <link href="libs/tile-view/tile-view.css" rel="stylesheet" />
@@ -18,10 +18,10 @@
     <link href="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.css" rel="stylesheet" />
     <script src="libs/xaringanExtra-clipboard/xaringanExtra-clipboard.js"></script>
     <script>window.xaringanExtraClipboard(null, {"button":"Copy Code","success":"Copied!","error":"Press Ctrl+C to Copy"})</script>
-    <link href="libs/font-awesome/css/all.min.css" rel="stylesheet" />
-    <link href="libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
     <link href="libs/font-awesome-animation/font-awesome-animation-emi.css" rel="stylesheet" />
     <script src="libs/fontawesome/js/fontawesome-all.min.js"></script>
+    <link href="libs/font-awesome/css/all.min.css" rel="stylesheet" />
+    <link href="libs/font-awesome/css/v4-shims.min.css" rel="stylesheet" />
     <script src="libs/htmlwidgets/htmlwidgets.js"></script>
     <link href="libs/wordcloud2/wordcloud.css" rel="stylesheet" />
     <script src="libs/wordcloud2/wordcloud2-all.js"></script>
@@ -45,35 +45,15 @@ background-size: cover
 
 
 
-# Análitica predictiva en Retail
+# Análitica predictiva en Retail: Usando R
 
 
-## Usando R
 ----
 
 
-### Orlando Joaqui-Barandica, PhD
+### Orlando Joaqui Barandica
 
 ### Noviembre 6, 2024
-
-
----
-
-class: about-me, middle, center
-
-
-&lt;img style="border-radius: 50%;" src="https://www.joaquibarandica.com/author/orlando-joaqui-barandica/avatar_hu5023ea1d1aacf3c485a0bf644538baf2_3165736_270x270_fill_lanczos_center_2.png" width="150px"/&gt;
-
-## Orlando Joaqui-Barandica
-
-### Estadístico | Magíster en Economía Aplicada | Doctor en Ingeniería
-
-### Universidad del Valle
-
-
-
-
-[<i class="fas  fa-link "></i> www.joaquibarandica.com](https://www.joaquibarandica.com)&lt;br/&gt;
 
 
 ---
@@ -98,7 +78,7 @@ class: about-me, middle, center
 
 ## 5. Regresión Lineal
 
-## 6. Caso de Estudio: Aplicación Práctica
+## 6. Caso Práctico
 
 ## 7. Conclusiones
 
@@ -294,36 +274,6 @@ class: right
 
 ---
 
-
-class: middle
-background-image: url("images/retail_5.jpg")
-background-size: cover
-
-
-
----
-
-
-
-class: middle
-background-image: url("images/retail_6.jpg")
-background-size: cover
-
-
-
----
-
-
-class: middle
-background-image: url("images/retail_7.jpg")
-background-size: cover
-
-
-
-
----
-
-
 # Analítica de Negocios / Business Analytics
 
 
@@ -365,36 +315,6 @@ background-size: cover
 
 
 
----
-
-class: middle
-background-image: url("images/retail_4.jpg")
-background-size: cover
-
-
-## Usando analítica, 
-## las empresas de Retail pueden:
-
-.pull-left[
-
-&gt; - .font120[.orange[**Integrar**] datos de redes sociales con fuentes de datos tradicionales como encuestas a clientes, grupos focales y datos de ventas.]
-
-&gt; - .font120[.orange[**Comprender**] las tendencias y las percepciones de los clientes sobre sus productos.]
-
-&gt; - .font120[.orange[**Crear**] informes informativos para ayudar a los gerentes de marketing y a los diseñadores de productos.]
-
-]
-
-
-
-
-.pull-right[
-
-
-]
-
-
-
 
 
 
@@ -405,6 +325,7 @@ background-size: cover
 
 
 ---
+
 
 
 
@@ -580,6 +501,10 @@ background-size: cover
 .center[
 ### Datos generados a partir de las transacciones en línea, como añadir productos al carrito, completar una compra, utilizar cupones y seleccionar opciones de envío...
 
+
+### Proyecto BanRep: Promover un sistema de pagos digitales.
+
+
 ]
 
 
@@ -742,20 +667,9 @@ class: center, middle
 
 
 ---
-background-image: url(images/back3.jpg)
-background-size: cover
-
-class: center, middle
-
-# <i class="fas fa-chart-pie" role="presentation" aria-label="chart-pie icon"></i>
-# Basic Graphs
-----
 
 
-
----
-
-# <i class="fas fa-chart-pie" role="presentation" aria-label="chart-pie icon"></i>  Basic Graphs
+# <i class="fas fa-chart-pie" role="presentation" aria-label="chart-pie icon"></i>  Gráficos básicos
 
 .left-column[
 Un gráfico básico aunque puede ser muy informativo de manera clara y concisa, la estética *(Ej: Color, Relleno (Fill), Labels, Size, Axes, ...)* 💅 hace que su lectura no sea agradable.
@@ -773,7 +687,7 @@ Un gráfico básico aunque puede ser muy informativo de manera clara y concisa, 
 
 
 
-# <i class="fas fa-chart-pie" role="presentation" aria-label="chart-pie icon"></i>  Basic Graphs
+# <i class="fas fa-chart-pie" role="presentation" aria-label="chart-pie icon"></i>  Gráficos básicos
 
 .left-column[
 Un gráfico básico aunque puede ser muy informativo de manera clara y concisa, la estética *(Ej: Color, Relleno (Fill), Labels, Size, Axes, ...)* 💅 hace que su lectura no sea agradable.
@@ -805,33 +719,6 @@ class: inverse, center, middle
 
 ---
 
-# Estética
-
-.left-column[
-
-## Dícese de .... <i class="fas fa-glasses" role="presentation" aria-label="glasses icon"></i>
-
-![](https://media.giphy.com/media/LTYT5GTIiAMBa/giphy.gif?cid=ecf05e474eh4j630guuedkpr6o39pg8nrur134aqur14r66i&amp;ep=v1_gifs_search&amp;rid=giphy.gif)
-
-]
-
-
-.right-column[
-
-La estética (del griego αἰσθητική [aisthetikê], ‘sensación’, ‘percepción’, y este de[aísthesis], ‘sensación’, ‘sensibilidad’, e -ικά [-icá], ‘relativo a’) es la rama de la filosofía que estudia la esencia y la percepción de la belleza y el arte.
-
-
-Algunos autores definen la estética de manera más amplia, como el estudio de las experiencias estéticas y los juicios estéticos en general, y no solo los relativos a la belleza. Cuando juzgamos algo como «bello», «feo», «sublime» o «elegante» (por dar algunos ejemplos), estamos haciendo juicios estéticos, que a su vez expresan experiencias estéticas. La estética es el dominio de la filosofía, estudiando el arte y cualidades como la belleza; asimismo es el estudio de estas experiencias y juicios que suceden día a día en las actividades que realizamos, produciendo sensaciones y emociones ya sean positivas o negativas en nuestra persona. La estética busca el por qué de algunas cuestiones, por ejemplo, por qué algún objeto, pintura o escultura no resulta atractivo para los espectadores; por lo tanto el arte lleva relación a la estética ya que busca generar sensaciones a través de una expresión............ 🥱🥱🥱🥱🥱🥱🥱🥱🥱🥱🥱
-
-
-----
-.right[
-Tomado de [Wikipedia](https://es.wikipedia.org/wiki/Est%C3%A9tica)
-]
-]
-
-
----
 
 class: center, middle
 
@@ -857,83 +744,42 @@ class: center, middle
 
 ---
 
-background-image: url(images/back3.jpg)
-background-size: cover
 
-class: center, middle
 
-# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i>
-# Good Graphs
-----
+# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Buenos gráficos
 
 
 
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-10-1.png" width="100%" /&gt;
 
 ---
 
-# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Good Graphs
-
+# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Buenos gráficos
 
 .pull-left[
 
-
-### ggplot2
-
-&gt; Es una de las librerías de la colección de tidyverse. `ggplot2 es un sistema para crear gráficos de forma declarativa, basado en The Grammar of Graphics . Usted proporciona los datos, le dice a ggplot2 cómo asignar variables a la estética, qué geometrías gráficas usar y se encarga de los detalles.`
-
-.center[
-&lt;img src="https://soka.gitlab.io/blog/post/2019-04-25-r-ggplot2-scatterplot/images/ggplot_hex.jpg" 
-width="150px"/&gt;
-]
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-11-1.png" width="2100" /&gt;
 
 ]
 
 .pull-right[
-
-
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-10-1.png" width="2100" /&gt;
-
-
-
-]
-
-
----
-
-# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Good Graphs
-
-
-
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-11-1.png" width="100%" /&gt;
-
----
-
-# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Good Graphs
-
-.pull-left[
 
 &lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-12-1.png" width="2100" /&gt;
 
 ]
 
-.pull-right[
-
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-13-1.png" width="2100" /&gt;
-
-]
-
 
 
 ---
 
-# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Good Graphs
+# <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Buenos gráficos
 
 ### Maps in R
 
 
 .left-column[
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-14-1.png" width="900%" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-13-1.png" width="900%" /&gt;
 
 
 
@@ -943,7 +789,7 @@ width="150px"/&gt;
 
 .right-column[
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-15-1.png" width="2100" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-14-1.png" width="2100" /&gt;
 
 ]
 
@@ -956,61 +802,14 @@ width="150px"/&gt;
 ### Wordcloud
 
 .left[
-<div id="htmlwidget-3d37c24b6215ffd9828b" style="width:100%;height:300px;" class="wordcloud2 html-widget"></div>
-<script type="application/json" data-for="htmlwidget-3d37c24b6215ffd9828b">{"x":{"word":["oil","said","prices","opec","mln","the","last","bpd","dlrs","crude","market","reuter","saudi","will","one","barrel","kuwait","new","official","pct","price","barrels","government","production","sheikh","industry","meeting","minister","world","also","billion","futures","month","output","petroleum","quota","sources","accord","analysts","but","group","gulf","january","markets","report","today","december","demand","economic","economy","energy","help","international","may","nazer","nymex","posted","present","they","traders","158","ability","agreement","ali","april","arabia","budget","emergency","exchange","hold","imports","members","recent","riyals","says","sell","years","abdulaziz","agency","arab","ceiling","company","contract","daily","emirates","expected","expenditure","exports","growth","now","opecs","plans","qatar","quoted","research","reserve","reserves","states","study","united","way","week","west","year","150","according","added","among","asked","brings","buyers","can","change","corp","cut","day","development","effective","exploration","fall","february","fell","free","higher","increase","levels","meet","must","never","per","policy","power","problem","producing","protect","pumping","reduced","revenue","revenues","rise","saying","set","since","spa","strategic","texas","this","total","transaction","weak","yesterday","13nation","1985","198586","1986","1987","198788","address","agreed","alkhalifa","alqabas","alsabah","announced","appears","arabian","arabias","around","average","back","bank","bbl","boost","called","commitment","companies","compared","countrys","current","decrease","denied","dollars","domestic","due","efp","estimate","estimates","export","fixed","foreign","four","future","grade","guard","high","hisham","however","inc","indonesia","indonesias","intermediate","kingdoms","kuwaits","local","low","lower","lowered","made","main","march","mckiernan","measures","mizrahi","moves","much","named","next","officials","plant","position","president","pressure","producer","projected","published","real","refinery","reiterated","remain","rule","say","sector","several","sharp","ship","six","slightly","smaller","spokeswoman","state","sweet","texaco","three","trading","two","weeks","york","1518","198687","20s","285000","500","725","750","948000","activity","adhering","agriculture","along","apparently","appeared","approved","architect","areas","aspen","bankers","based","benchmark","benefits","canada","canadian","cash","changed","changes","circumstance","clearly","closed","coast","come","committee","commodity","consumption","countries","country","crossroads","crucial","cubic","currently","customers","deal","decembers","decline","deficit","deposits","deputy","diamond","differentials","difficulties","direction","discounted","dlr","early","ecuador","effect","embargo","embassy","entering","even","falling","feb","first","fiscal","fiscales","forced","fully","gcc","general","given","grades","halt","hit","hope","humanistic","impact","import","increased","increasing","instead","institute","interview","investment","jersey","june","keep","late","light","limit","limits","line","lost","louisiana","lowest","major","marketing","member","mid","million","ministers","mitigate","months","nearing","net","neutral","none","nuclear","organisation","organization","outlook","overseas","pact","pay","petroliferos","planned","port","positive","postings","predicted","press","pricing","private","probably","problems","pronounced","protected","public","put","quotes","raise","rate","reduction","referring","remarks","reports","return","review","risks","riyal","selfimposed","selling","share","shortfall","spot","steady","stick","strongly","studies","support","take","taken","techniques","throughput","trade","trust","trying","uncertainty","union","value","wam","wanted","weakness","winter","yacimientos","yanbu","zero","zone","100000","108","111","115","12217","1232","1381","13member","156","1600","1635","1650","1667","168","1685","1752","180000","200000","200foot","2226","24hour","2766","300","3749598","3750003","4133","534","5472","614","658","6745","678","718","738","able","abroad","accept","across","add","addressed","adherence","advantage","advisers","after","agricultural","aground","allocated","allocations","allow","almost","already","althani","although","alvite","amidst","analysis","analyst","annual","anything","apparent","aramco","argentine","arrangement","asia","asian","assesses","assign","assigned","associates","attract","available","averaging","aware","bahrain","bahrains","balance","baseless","basic","basis","because","beginning","bijan","bin","bit","bodys","briefly","broadened","brothers","buildings","burden","buy","buyer","calendar","cambridge","capacity","capozza","carrying","center","century","cera","certain","cftc","chairman","challenge","characterized","charging","cheap","cheating","chevron","chv","cited","citing","clever","close","closer","closes","coming","commission","communications","companys","completed","complex","condition","conditions","considered","construction","contacts","continuation","continue","continued","continues","contracted","contributed","control","cooperation","coordination","copany","corps","council","counter","coupled","covered","creek","critical","cts","currency","custom","cuts","cutting","cypriot","daniel","david","days","debtburdened","debut","decided","declared","declines","deemed","defence","delaware","delivered","delivering","departments","deregulate","deregulation","determination","devalue","device","differential","difficulty","dillard","director","discuss","discussing","distribution","distributions","divided","doha","dollar","drawbacks","drop","dropped","earlier","earnings","eastern","easy","ecuadors","editor","edmontonswann","education","eight","either","elaborate","elections","electricity","end","engineers","entitlements","environment","equally","estimated","european","exceed","exceeding","excess","excesses","excessive","exerted","exist","expanded","expansion","expartners","expectations","expects","explained","exporting","exxon","face","faced","faces","facilities","facing","failed","fallen","favours","fee","fernando","figure","figures","finance","firmer","floating","followed","for","forces","foremost","fourth","frank","full","fundamentals","gas","generally","geneva","get","globalization","glut","guaranteed","halting","harvard","heads","health","hedge","hedged","helped","hemisphere","highly","hills","hitting","hoped","housing","houston","immediately","implementation","improve","improvement","include","including","independent","indications","initiate","initiative","institutions","interbank","interest","investments","issue","jamaica","jan","juaymah","jubail","jump","just","khalifa","lack","largest","later","latest","launched","lead","leading","learn","least","lending","less","lesson","level","liberalised","lift","liftings","like","lines","liquidity","little","loan","lodged","longterm","ltd","lukman","lull","maintain","make","manager","manipulate","many","marathon","marathons","marker","mcfadden","means","mercantile","metrers","metres","mid1960s","mid1986","mideast","minus","mlotok","mob","mobil","momentum","money","monopolies","monthend","moussavarrahmani","movement","nation","natural","need","needs","negative","negotiate","neither","network","news","newspaper","nigerian","nine","nonoil","northern","notes","offset","onetwelfth","oneweek","open","opens","operations","opposite","optimism","optimistic","option","order","organiaation","our","outlining","outside","overproducing","part","parties","partly","party","past","paths","paul","paulsboro","payments","pegged","performance","period","pertains","pessimistic","philadelphia","physical","placed","plastics","platinum","point","policies","political","population","positions","postponed","pressures","previous","primarily","primary","principal","procedure","produce","produced","producers","product","products","program","projection","projects","prompted","proposed","proved","providing","provision","publish","purposes","quarter","quiet","quietly","quotas","rallied","ran","ranging","ras","rates","rationalise","readdress","reaffirmed","reasonable","recommending","recovering","recurrent","reference","refineries","refining","reflect","refloat","reform","reforms","regain","regard","regarding","region","regional","reiterate","relaxation","relieve","reluctant","remainder","remained","reported","request","resistance","resisting","resources","respectively","responsibilites","restored","restraint","restrictions","result","reuters","revealed","reviews","right","rilwanu","rising","river","rocks","rosemary","rumour","rushing","sales","salomon","santos","satisfied","saw","scheduled","scheme","seapride","season","secretary","security","seeing","seek","september","series","serve","services","session","sets","seven","severely","shamrock","sharply","shoulder","show","showed","shown","signed","signs","situation","sixmonth","slackens","slide","slump","social","sold","soon","sort","sour","south","southeast","spend","spill","spoke","spokesman","spotnext","spriggs","stabilise","stabilize","stable","start","statement","steel","steering","steps","stiff","storage","strong","subsequently","substitution","succeed","suffer","suffering","suhartos","sunday","sundays","supply","supporting","suppose","surrounding","swift","talks","tanker","tanurah","tapers","teach","telephone","terminals","test","there","third","thomas","though","thought","threemonth","tide","together","told","totalled","tower","trader","trades","traditional","traditionally","transacted","transmission","transport","trends","trusts","try","turmoil","twofold","uae","uncertain","unchanged","under","unions","unitholders","universitys","unlikely","unocal","unusually","urged","use","virtual","wants","water","wealth","wednesday","weekend","welcomed","when","whether","wishes","worldwide","xon","yergin","yesterdays"],"freq":[85,73,48,42,31,26,24,23,23,21,20,20,18,18,17,15,14,14,14,14,13,11,11,11,11,10,10,10,10,9,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":2.117647058823529,"backgroundColor":"white","gridSize":0,"minRotation":-0.7853981633974483,"maxRotation":0.7853981633974483,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
+<div id="htmlwidget-917b58d7bc75af5bc047" style="width:100%;height:300px;" class="wordcloud2 html-widget"></div>
+<script type="application/json" data-for="htmlwidget-917b58d7bc75af5bc047">{"x":{"word":["oil","said","prices","opec","mln","the","last","bpd","dlrs","crude","market","reuter","saudi","will","one","barrel","kuwait","new","official","pct","price","barrels","government","production","sheikh","industry","meeting","minister","world","also","billion","futures","month","output","petroleum","quota","sources","accord","analysts","but","group","gulf","january","markets","report","today","december","demand","economic","economy","energy","help","international","may","nazer","nymex","posted","present","they","traders","158","ability","agreement","ali","april","arabia","budget","emergency","exchange","hold","imports","members","recent","riyals","says","sell","years","abdulaziz","agency","arab","ceiling","company","contract","daily","emirates","expected","expenditure","exports","growth","now","opecs","plans","qatar","quoted","research","reserve","reserves","states","study","united","way","week","west","year","150","according","added","among","asked","brings","buyers","can","change","corp","cut","day","development","effective","exploration","fall","february","fell","free","higher","increase","levels","meet","must","never","per","policy","power","problem","producing","protect","pumping","reduced","revenue","revenues","rise","saying","set","since","spa","strategic","texas","this","total","transaction","weak","yesterday","13nation","1985","198586","1986","1987","198788","address","agreed","alkhalifa","alqabas","alsabah","announced","appears","arabian","arabias","around","average","back","bank","bbl","boost","called","commitment","companies","compared","countrys","current","decrease","denied","dollars","domestic","due","efp","estimate","estimates","export","fixed","foreign","four","future","grade","guard","high","hisham","however","inc","indonesia","indonesias","intermediate","kingdoms","kuwaits","local","low","lower","lowered","made","main","march","mckiernan","measures","mizrahi","moves","much","named","next","officials","plant","position","president","pressure","producer","projected","published","real","refinery","reiterated","remain","rule","say","sector","several","sharp","ship","six","slightly","smaller","spokeswoman","state","sweet","texaco","three","trading","two","weeks","york","1518","198687","20s","285000","500","725","750","948000","activity","adhering","agriculture","along","apparently","appeared","approved","architect","areas","aspen","bankers","based","benchmark","benefits","canada","canadian","cash","changed","changes","circumstance","clearly","closed","coast","come","committee","commodity","consumption","countries","country","crossroads","crucial","cubic","currently","customers","deal","decembers","decline","deficit","deposits","deputy","diamond","differentials","difficulties","direction","discounted","dlr","early","ecuador","effect","embargo","embassy","entering","even","falling","feb","first","fiscal","fiscales","forced","fully","gcc","general","given","grades","halt","hit","hope","humanistic","impact","import","increased","increasing","instead","institute","interview","investment","jersey","june","keep","late","light","limit","limits","line","lost","louisiana","lowest","major","marketing","member","mid","million","ministers","mitigate","months","nearing","net","neutral","none","nuclear","organisation","organization","outlook","overseas","pact","pay","petroliferos","planned","port","positive","postings","predicted","press","pricing","private","probably","problems","pronounced","protected","public","put","quotes","raise","rate","reduction","referring","remarks","reports","return","review","risks","riyal","selfimposed","selling","share","shortfall","spot","steady","stick","strongly","studies","support","take","taken","techniques","throughput","trade","trust","trying","uncertainty","union","value","wam","wanted","weakness","winter","yacimientos","yanbu","zero","zone","100000","108","111","115","12217","1232","1381","13member","156","1600","1635","1650","1667","168","1685","1752","180000","200000","200foot","2226","24hour","2766","300","3749598","3750003","4133","534","5472","614","658","6745","678","718","738","able","abroad","accept","across","add","addressed","adherence","advantage","advisers","after","agricultural","aground","allocated","allocations","allow","almost","already","althani","although","alvite","amidst","analysis","analyst","annual","anything","apparent","aramco","argentine","arrangement","asia","asian","assesses","assign","assigned","associates","attract","available","averaging","aware","bahrain","bahrains","balance","baseless","basic","basis","because","beginning","bijan","bin","bit","bodys","briefly","broadened","brothers","buildings","burden","buy","buyer","calendar","cambridge","capacity","capozza","carrying","center","century","cera","certain","cftc","chairman","challenge","characterized","charging","cheap","cheating","chevron","chv","cited","citing","clever","close","closer","closes","coming","commission","communications","companys","completed","complex","condition","conditions","considered","construction","contacts","continuation","continue","continued","continues","contracted","contributed","control","cooperation","coordination","copany","corps","council","counter","coupled","covered","creek","critical","cts","currency","custom","cuts","cutting","cypriot","daniel","david","days","debtburdened","debut","decided","declared","declines","deemed","defence","delaware","delivered","delivering","departments","deregulate","deregulation","determination","devalue","device","differential","difficulty","dillard","director","discuss","discussing","distribution","distributions","divided","doha","dollar","drawbacks","drop","dropped","earlier","earnings","eastern","easy","ecuadors","editor","edmontonswann","education","eight","either","elaborate","elections","electricity","end","engineers","entitlements","environment","equally","estimated","european","exceed","exceeding","excess","excesses","excessive","exerted","exist","expanded","expansion","expartners","expectations","expects","explained","exporting","exxon","face","faced","faces","facilities","facing","failed","fallen","favours","fee","fernando","figure","figures","finance","firmer","floating","followed","for","forces","foremost","fourth","frank","full","fundamentals","gas","generally","geneva","get","globalization","glut","guaranteed","halting","harvard","heads","health","hedge","hedged","helped","hemisphere","highly","hills","hitting","hoped","housing","houston","immediately","implementation","improve","improvement","include","including","independent","indications","initiate","initiative","institutions","interbank","interest","investments","issue","jamaica","jan","juaymah","jubail","jump","just","khalifa","lack","largest","later","latest","launched","lead","leading","learn","least","lending","less","lesson","level","liberalised","lift","liftings","like","lines","liquidity","little","loan","lodged","longterm","ltd","lukman","lull","maintain","make","manager","manipulate","many","marathon","marathons","marker","mcfadden","means","mercantile","metrers","metres","mid1960s","mid1986","mideast","minus","mlotok","mob","mobil","momentum","money","monopolies","monthend","moussavarrahmani","movement","nation","natural","need","needs","negative","negotiate","neither","network","news","newspaper","nigerian","nine","nonoil","northern","notes","offset","onetwelfth","oneweek","open","opens","operations","opposite","optimism","optimistic","option","order","organiaation","our","outlining","outside","overproducing","part","parties","partly","party","past","paths","paul","paulsboro","payments","pegged","performance","period","pertains","pessimistic","philadelphia","physical","placed","plastics","platinum","point","policies","political","population","positions","postponed","pressures","previous","primarily","primary","principal","procedure","produce","produced","producers","product","products","program","projection","projects","prompted","proposed","proved","providing","provision","publish","purposes","quarter","quiet","quietly","quotas","rallied","ran","ranging","ras","rates","rationalise","readdress","reaffirmed","reasonable","recommending","recovering","recurrent","reference","refineries","refining","reflect","refloat","reform","reforms","regain","regard","regarding","region","regional","reiterate","relaxation","relieve","reluctant","remainder","remained","reported","request","resistance","resisting","resources","respectively","responsibilites","restored","restraint","restrictions","result","reuters","revealed","reviews","right","rilwanu","rising","river","rocks","rosemary","rumour","rushing","sales","salomon","santos","satisfied","saw","scheduled","scheme","seapride","season","secretary","security","seeing","seek","september","series","serve","services","session","sets","seven","severely","shamrock","sharply","shoulder","show","showed","shown","signed","signs","situation","sixmonth","slackens","slide","slump","social","sold","soon","sort","sour","south","southeast","spend","spill","spoke","spokesman","spotnext","spriggs","stabilise","stabilize","stable","start","statement","steel","steering","steps","stiff","storage","strong","subsequently","substitution","succeed","suffer","suffering","suhartos","sunday","sundays","supply","supporting","suppose","surrounding","swift","talks","tanker","tanurah","tapers","teach","telephone","terminals","test","there","third","thomas","though","thought","threemonth","tide","together","told","totalled","tower","trader","trades","traditional","traditionally","transacted","transmission","transport","trends","trusts","try","turmoil","twofold","uae","uncertain","unchanged","under","unions","unitholders","universitys","unlikely","unocal","unusually","urged","use","virtual","wants","water","wealth","wednesday","weekend","welcomed","when","whether","wishes","worldwide","xon","yergin","yesterdays"],"freq":[85,73,48,42,31,26,24,23,23,21,20,20,18,18,17,15,14,14,14,14,13,11,11,11,11,10,10,10,10,9,9,9,9,9,9,9,9,8,8,8,8,8,8,8,8,8,7,7,7,7,7,7,7,7,7,7,7,7,7,7,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,6,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,5,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,4,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,3,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,2,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1,1],"fontFamily":"Segoe UI","fontWeight":"bold","color":"random-dark","minSize":0,"weightFactor":2.117647058823529,"backgroundColor":"white","gridSize":0,"minRotation":-0.7853981633974483,"maxRotation":0.7853981633974483,"shuffle":true,"rotateRatio":0.4,"shape":"circle","ellipticity":0.65,"figBase64":null,"hover":null},"evals":[],"jsHooks":{"render":[{"code":"function(el,x){\n                        console.log(123);\n                        if(!iii){\n                          window.location.reload();\n                          iii = False;\n\n                        }\n  }","data":null}]}}</script>
 ]
 
 
 
 
 ---
-
-class: center, middle
-
-#  <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> 
-# Gráficos interactivos
-----
-
-
-
----
-
-#  <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Gráficos interactivos
-
-
-
-.pull-left[
-
-
-### plotly
-
-&gt; La biblioteca de gráficos R de Plotly crea gráficos interactivos con calidad de publicación (También proporciona librerías para Python). `Las bibliotecas de gráficos de código abierto de Plotly son de uso gratuito, funcionan sin conexión y no requieren ningún registro de cuenta. Plotly también tiene ofertas comerciales, como Dash Enterprise y Chart Studio Enterprise.` 
-
-
-.center[
-&lt;img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Plotly_logo_for_digital_final_%286%29.png/330px-Plotly_logo_for_digital_final_%286%29.png" 
-width="150px"/&gt;
-]
-
-]
-
-.pull-right[
-
-
-
-
-
-.center[
-&lt;iframe src="images/fig.3d.html" allowtransparency="true" height="450" width="1100" scrolling="yes" style="border: none;" data-external="1"&gt;&lt;/iframe&gt;
-]
-
-
-]
-
-
-
----
-
 
 
 
@@ -1032,51 +831,6 @@ width="150px"/&gt;
 ---
 
 
-#  <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Gráficos interactivos
-
-### Gráficos descriptivos (Barras)
-
-
-
-
-.center[
-&lt;iframe src="images/fig.bar.html" allowtransparency="true" height="450" width="1100" scrolling="yes" style="border: none;" data-external="1"&gt;&lt;/iframe&gt;
-]
-
-
----
-
-#  <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Gráficos interactivos
-
-### Gráficos descriptivos (Pie)
-
-
-
-
-.center[
-&lt;iframe src="images/fig_pie.html" allowtransparency="true" height="450" width="1100" scrolling="yes" seamless="seamless" frameBorder="0" data-external="1"&gt; &lt;/iframe&gt;
-]
-
-
----
-
-
-#  <i class="far fa-chart-bar" role="presentation" aria-label="chart-bar icon"></i> Gráficos interactivos
-
-### Gráficos descriptivos (Línea)
-
-Serie histórica de rentabilidad
-
-
-
-.center[
-&lt;iframe src="images/fig.series.html" allowtransparency="true" height="450" width="1100" scrolling="yes" seamless="seamless" frameBorder="0" data-external="1"&gt; &lt;/iframe&gt;
-]
-
-
----
-
-
 
 
 
@@ -1089,7 +843,7 @@ Serie histórica de rentabilidad
 
 .pull-left[
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-22-1.png" width="2100" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-17-1.png" width="2100" /&gt;
 
 
 
@@ -1201,15 +955,6 @@ background-size: cover
 
 ---
 
-class: center, middle, inverse
-background-image: url(https://media.giphy.com/media/YK257LnLWgGR2/giphy.gif)
-background-size: cover
-
-# ¿Cómo proceden los analistas en el análisis de problemas en el sector Retail?
-
-# Es decir, ¿cuál es su metodología?
-
----
 
 # Metodología
 
@@ -1375,6 +1120,11 @@ Variable aleatoria que representa factores adicionales que influyen en el gasto 
 ---
 
 
+background-image: url("images/crispdm.png")
+background-size: cover
+
+
+.pull-left[
 
 # Metodología CRISP-DM
 
@@ -1396,8 +1146,23 @@ Variable aleatoria que representa factores adicionales que influyen en el gasto 
     
 - **Datos**: Registros trimestrales de 2010 a 2020
 
+
+]
+
+
+.pull-right[
+
+
+]
+
 ---
 
+
+background-image: url("images/crispdm.png")
+background-size: cover
+
+
+.pull-left[
 
 # Metodología CRISP-DM
 
@@ -1421,11 +1186,27 @@ Variable aleatoria que representa factores adicionales que influyen en el gasto 
 
 `\(\beta_1\)`: Propensión Marginal a Consumir (PMC) en retail.
 
+
+]
+
+
+
+.pull-right[
+
+
+]
+
+
 ---
 
 
-# Metodología CRISP-DM
+background-image: url("images/crispdm.png")
+background-size: cover
 
+
+.pull-left[
+
+# Metodología CRISP-DM
 
 
 
@@ -1447,7 +1228,15 @@ Variable aleatoria que representa factores adicionales que influyen en el gasto 
 
 - **Ejemplo**: Si Ingreso = $50,000 → Gasto proyectado = $30,200
 
-- **Uso en retail**: Planificación de inventario y marketing.
+
+
+]
+
+.pull-right[
+
+
+]
+
 
 ---
 
@@ -1543,7 +1332,7 @@ class: center
 
 .pull-left[
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-47-1.png" width="2100" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-37-1.png" width="2100" /&gt;
 
 
 .center[Correlación entre `Tamaño del producto` y `No. Ventas promedio` es -0.84. 
@@ -1557,7 +1346,7 @@ class: center
 
 .pull-right[
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-48-1.png" width="2100" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-38-1.png" width="2100" /&gt;
 
 
 
@@ -1888,33 +1677,6 @@ El valor p es la probabilidad de obtener un valor del estadístico de prueba tan
 ---
 
 
-
-
-# Predicción
-
-.pull-left[
-
-
-
-* En muchas situaciones, nos interesa predecir el valor de una variable dependiente `\(Y\)` para un conjunto de valores dados de las variables explicativas `\(X_1, X_2, ..., X_k\)`.
-
-* Por ejemplo, podemos querer predecir la demanda de un producto en función de su precio y otros factores relacionados.
-
-* El análisis de regresión nos permite modelar la relación entre las variables explicativas y la variable dependiente, y usar ese modelo para hacer predicciones.
-
-]
-
-
-.pull-right[
-
-
-&lt;img src="https://media.giphy.com/media/3otPot5ichOK0OWk3C/giphy.gif" width="90%"&gt;
-
-
-]
-
----
-
 # Predicción
 
 Una vez que se han estimado los parámetros del modelo de regresión lineal simple, podemos usar el modelo para hacer predicciones.
@@ -1995,7 +1757,7 @@ legend("topright", legend = c("Predicción", "Intervalo de confianza para la pre
 .pull-right[
 
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-54-1.png" width="2100" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-44-1.png" width="2100" /&gt;
 
 ]
 
@@ -2016,7 +1778,7 @@ Esta condición se puede validar bien mediante diagramas de dispersión entre la
 
 .pull-right[
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-55-1.png" width="2100" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-45-1.png" width="2100" /&gt;
 
 ]
 
@@ -2027,7 +1789,7 @@ Esta condición se puede validar bien mediante diagramas de dispersión entre la
 &lt;br&gt;
 &lt;br&gt;
 
-&gt; **Distribución normal de los residuos:**
+&gt; **Distribución normal de los errores:**
 
 
 &lt;br&gt;
@@ -2068,7 +1830,7 @@ shapiro.test(model$residuals)
 &lt;br&gt;
 &lt;br&gt;
 
-&gt; **Variabilidad constante de los residuos (homocedasticidad):**
+&gt; **Variabilidad constante de los errores (homocedasticidad):**
 
 &lt;br&gt;
 &lt;br&gt;
@@ -2114,7 +1876,7 @@ bptest(model)
 
 .pull-left[
 
-&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-58-1.png" width="2100" /&gt;
+&lt;img src="AnaliticaPredictivaRetail_files/figure-html/unnamed-chunk-48-1.png" width="2100" /&gt;
 
 
 - El modelo de regresión ajustado es:
@@ -2252,12 +2014,14 @@ background-size: cover
 .pull-left[
 
 
-### La empresa Adidas desea entender los factores que influyen en el desempeño de ventas de sus productos (ventas totales). 
+### La empresa Adidas desea comprender los factores que afectan la ganancia operativa de sus productos. Buscamos predecir la ganancia operativa en función de:
 
-- Buscamos predecir las ventas en función de variables cuantitativas como el precio por unidad y el número de unidades vendidas, así como variables categóricas como el método de ventas y el retailer. 
+- Variables cuantitativas: Precio por unidad y número de unidades vendidas.
+- Variables categóricas: Método de ventas y retailer.
 
+&gt; Con este análisis, el equipo de Adidas podrá identificar cómo diferentes precios, volúmenes de venta, métodos de venta y canales de distribución influyen en la ganancia operativa.
 
-- Con esta predicción, el equipo puede ajustar sus estrategias de venta para maximizar el rendimiento en función de los diferentes métodos de venta y canales de distribución.
+- Datos tomados de `Kaggle`
 
 ]
 
@@ -2360,57 +2124,6 @@ background-size: cover
 
 ---
 
-class: inverse, center, middle
-background-color: #122140
-
-.pull-left[
-
-.center[
-&lt;br&gt;&lt;br&gt;
-
-# Gracias!!!
-
-&lt;br&gt;
-
-
-
-### ¿Preguntas?
-
-&lt;br&gt;
-
-
-&lt;img src="images/qr-code.png" width="49%" style="display: block; margin: auto;" /&gt;
-
-
-]
-
-
-]
-
-
-.pull-right[
-
-&lt;br&gt; 
-&lt;br&gt; 
-&lt;img style="border-radius: 50%;" src="images/avatar.png"
-width="150px"
-/&gt;
-
-### [www.joaquibarandica.com](https://www.joaquibarandica.com)
-
-<i class="far fa-envelope" role="presentation" aria-label="envelope icon"></i> orlando.joaqui@correounivalle.edu.co
-
-&lt;img src="images/Logo.jpg" width="120%"&gt;
-
-]
-
-
-&lt;br&gt;&lt;br&gt;&lt;br&gt;
-
-
-
-
----
 
 
 
@@ -2443,6 +2156,60 @@ background-size: cover
 
 
 ]
+
+
+
+---
+
+class: inverse, center, middle
+background-color: #122140
+
+.pull-left[
+
+.center[
+&lt;br&gt;&lt;br&gt;
+
+# Gracias!!!
+
+&lt;br&gt;
+
+
+
+### ¿Preguntas?
+
+&lt;br&gt;
+&lt;br&gt;
+
+
+<i class="far fa-envelope" role="presentation" aria-label="envelope icon"></i> orlando.joaqui@correounivalle.edu.co
+
+]
+
+
+]
+
+
+.pull-right[
+
+&lt;br&gt; 
+&lt;br&gt; 
+&lt;br&gt; 
+
+&lt;img src="images/qr-code.png" width="49%" style="display: block; margin: auto;" /&gt;
+
+
+
+
+
+]
+
+
+&lt;br&gt;&lt;br&gt;&lt;br&gt;
+
+
+
+
+
 
 
 

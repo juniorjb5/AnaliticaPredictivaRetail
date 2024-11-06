@@ -169,6 +169,10 @@ background-size: cover
 .center[
 ### Datos generados a partir de las transacciones en línea, como añadir productos al carrito, completar una compra, utilizar cupones y seleccionar opciones de envío...
 
+
+### Proyecto BanRep: Promover un sistema de pagos digitales.
+
+
 ]
 
 

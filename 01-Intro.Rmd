@@ -185,36 +185,6 @@ class: right
 
 ---
 
-
-class: middle
-background-image: url("images/retail_5.jpg")
-background-size: cover
-
-
-
----
-
-
-
-class: middle
-background-image: url("images/retail_6.jpg")
-background-size: cover
-
-
-
----
-
-
-class: middle
-background-image: url("images/retail_7.jpg")
-background-size: cover
-
-
-
-
----
-
-
 # Analítica de Negocios / Business Analytics
 
 
@@ -253,36 +223,6 @@ background-size: cover
 
 ]
 
-
-
-
----
-
-class: middle
-background-image: url("images/retail_4.jpg")
-background-size: cover
-
-
-## Usando analítica, 
-## las empresas de Retail pueden:
-
-.pull-left[
-
-> - .font120[.orange[**Integrar**] datos de redes sociales con fuentes de datos tradicionales como encuestas a clientes, grupos focales y datos de ventas.]
-
-> - .font120[.orange[**Comprender**] las tendencias y las percepciones de los clientes sobre sus productos.]
-
-> - .font120[.orange[**Crear**] informes informativos para ayudar a los gerentes de marketing y a los diseñadores de productos.]
-
-]
-
-
-
-
-.pull-right[
-
-
-]
 
 
 

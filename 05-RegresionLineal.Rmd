@@ -431,33 +431,6 @@ summary(modelo1)
 ---
 
 
-
-
-# Predicción
-
-.pull-left[
-
-
-
-* En muchas situaciones, nos interesa predecir el valor de una variable dependiente $Y$ para un conjunto de valores dados de las variables explicativas $X_1, X_2, ..., X_k$.
-
-* Por ejemplo, podemos querer predecir la demanda de un producto en función de su precio y otros factores relacionados.
-
-* El análisis de regresión nos permite modelar la relación entre las variables explicativas y la variable dependiente, y usar ese modelo para hacer predicciones.
-
-]
-
-
-.pull-right[
-
-
-<img src="https://media.giphy.com/media/3otPot5ichOK0OWk3C/giphy.gif" width="90%">
-
-
-]
-
----
-
 # Predicción
 
 Una vez que se han estimado los parámetros del modelo de regresión lineal simple, podemos usar el modelo para hacer predicciones.
@@ -593,7 +566,7 @@ plot(retail_data_quant$product_size, retail_data_quant$sales_performance,
 <br>
 <br>
 
-> **Distribución normal de los residuos:**
+> **Distribución normal de los errores:**
 
 
 <br>
@@ -629,7 +602,7 @@ shapiro.test(model$residuals)
 <br>
 <br>
 
-> **Variabilidad constante de los residuos (homocedasticidad):**
+> **Variabilidad constante de los errores (homocedasticidad):**
 
 <br>
 <br>

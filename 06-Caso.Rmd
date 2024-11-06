@@ -41,12 +41,14 @@ background-size: cover
 .pull-left[
 
 
-### La empresa Adidas desea entender los factores que influyen en el desempeño de ventas de sus productos (ventas totales). 
+### La empresa Adidas desea comprender los factores que afectan la ganancia operativa de sus productos. Buscamos predecir la ganancia operativa en función de:
 
-- Buscamos predecir las ventas en función de variables cuantitativas como el precio por unidad y el número de unidades vendidas, así como variables categóricas como el método de ventas y el retailer. 
+- Variables cuantitativas: Precio por unidad y número de unidades vendidas.
+- Variables categóricas: Método de ventas y retailer.
 
+> Con este análisis, el equipo de Adidas podrá identificar cómo diferentes precios, volúmenes de venta, métodos de venta y canales de distribución influyen en la ganancia operativa.
 
-- Con esta predicción, el equipo puede ajustar sus estrategias de venta para maximizar el rendimiento en función de los diferentes métodos de venta y canales de distribución.
+- Datos tomados de `Kaggle`
 
 ]
 
@@ -149,6 +151,43 @@ background-size: cover
 
 ---
 
+
+
+
+background-image: url("images/Imagen1.png")
+background-size: cover
+
+
+# Bonus track - Simulación
+
+
+.pull-left[
+
+
+### ¿Cuánto estarías dispuesto a pagar por una taza de este café especial?
+
+<br>
+
+### ¿Con qué frecuencia consumirías este café? (Cuántas tazas por mes)
+
+<br>
+
+### ¿Preferirías consumir este café en casa o en una cafetería?
+
+]
+
+
+
+.pull-right[
+
+
+
+]
+
+
+
+---
+
 class: inverse, center, middle
 background-color: #122140
 
@@ -166,12 +205,10 @@ background-color: #122140
 ### ¿Preguntas?
 
 <br>
+<br>
 
 
-```{r qr, echo=FALSE, fig.align="center", out.width="49%"}
-knitr::include_graphics("images/qr-code.png")
-```
-
+`r icon("envelope")` orlando.joaqui@correounivalle.edu.co
 
 ]
 
@@ -183,15 +220,15 @@ knitr::include_graphics("images/qr-code.png")
 
 <br> 
 <br> 
-<img style="border-radius: 50%;" src="images/avatar.png"
-width="150px"
-/>
+<br> 
 
-### [www.joaquibarandica.com](https://www.joaquibarandica.com)
+```{r qr, echo=FALSE, fig.align="center", out.width="49%"}
+knitr::include_graphics("images/qr-code.png")
+```
 
-`r icon("envelope")` orlando.joaqui@correounivalle.edu.co
 
-<img src="images/Logo.jpg" width="120%">
+
+
 
 ]
 

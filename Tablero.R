@@ -287,7 +287,7 @@ server <- function(input, output) {
     prediction <- predict(modelo, newdata = new_data, interval = "prediction")
     
       output$predictionResult <- renderPrint({
-      print(paste("La predicción de ventas totales es: $", round(prediction[1], 2)))
+      print(paste("La predicción de la utilidad operativa es: $", round(prediction[1], 2)))
       
         
       print(paste("El intervalo de confianza para la predicción es:", round(prediction[2], 2), " - ", round(prediction[3], 2), "con una confianza del 95%"))

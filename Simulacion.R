@@ -9,45 +9,76 @@ library(caret)
 # Ejemplo de datos simulados con respuestas hipotéticas
 
 
-#datos_profesores <- data.frame(
-#  precio_dispuesto_pagar = c(),
-#  tazas_mensuales = c(), # Número de tazas al mes
-#  preferencia_consumo = c("Casa", "Cafetería")
-#)
-
-
 set.seed(123)
 
 datos_profesores <- data.frame(
-  precio_dispuesto_pagar = round(runif(12, 2.5, 5), 2), # Precio dispuesto a pagar
-  tazas_mensuales = sample(10:30, 12, replace = TRUE), # Número de tazas al mes
-  preferencia_consumo = sample(c("Casa", "Cafetería"), 12, replace = TRUE) # Preferencia de consumo
+  precio_dispuesto_pagar = c(4500, 3800, 4200, 3500, 4900, 4100, 3700, 4000, 4400, 3900, 4300, 4200),
+  tazas_mensuales = c(15, 18, 20, 12, 25, 17, 13, 20, 22, 16, 19, 21),
+  preferencia_consumo = as.factor(c("Casa", "Cafetería", "Casa", "Casa", "Cafetería", "Casa", 
+                                    "Casa", "Cafetería", "Cafetería", "Casa", "Cafetería", "Casa"))
 )
 
-# Asumimos normalidad para datos cuantitativos, categorías para cualitativos
 
-# Crear función para simulación basada en datos iniciales
-
-simular_datos <- function(datos, n) {
-  data.frame(
-    precio_dispuesto_pagar = rnorm(n, mean(datos$precio_dispuesto_pagar), sd(datos$precio_dispuesto_pagar)),
-    tazas_mensuales = rnorm(n, mean(datos$tazas_mensuales), sd(datos$tazas_mensuales)),
-    preferencia_consumo = sample(datos$preferencia_consumo, n, replace = TRUE)
-  )
-}
-
-# Generar muestra de 200 individuos
-datos_simulados <- simular_datos(datos_profesores, 200)
+datos_profesores
 
 
-# Convertir la variable 'preferencia_consumo' en una dummy variable para el modelo
-datos_simulados$preferencia_consumo <- factor(datos_simulados$preferencia_consumo, levels = c("Casa", "Cafetería"))
+ggplot(datos_profesores,aes(x=tazas_mensuales,y=precio_dispuesto_pagar,color=preferencia_consumo))+
+  geom_point(size=5)+
+  theme_minimal()
+
+
+# Simulación
+
+modelo_inicial <- lm(precio_dispuesto_pagar ~ tazas_mensuales , data = datos_profesores)
+
+nueva_muestra <- data.frame(
+  tazas_mensuales = rnorm(200, mean = mean(datos_profesores$tazas_mensuales), 
+                          sd = sd(datos_profesores$tazas_mensuales))
+)
+
+# Usamos el modelo inicial para predecir 'precio_dispuesto_pagar' en la nueva muestra
+nueva_muestra$precio_dispuesto_pagar <- predict(modelo_inicial, nueva_muestra) + rnorm(200, 0, 500) # Añadimos ruido
+
+
+ggplot(nueva_muestra,aes(x=tazas_mensuales,y=precio_dispuesto_pagar))+
+  geom_point(size=5)+
+  theme_minimal()
+
+
+# Aplicar el modelo KNN para predecir la preferencia de consumo
+# Escalamos las variables para asegurar que están en la misma escala
+escala_datos <- scale(datos_profesores[, c("precio_dispuesto_pagar", "tazas_mensuales")])
+escala_nueva_muestra <- scale(nueva_muestra[, c("precio_dispuesto_pagar", "tazas_mensuales")])
+
+
+# Predicción de la preferencia de consumo con KNN
+nueva_muestra$preferencia_consumo <- knn(
+  train = escala_datos,
+  test = escala_nueva_muestra,
+  cl = datos_profesores$preferencia_consumo,
+  k = 3  # Número de vecinos
+)
+
+
+nueva_muestra$preferencia_consumo <- factor(nueva_muestra$preferencia_consumo, levels = c("Casa", "Cafetería"))
+
+
+ggplot(nueva_muestra,aes(x=tazas_mensuales,y=precio_dispuesto_pagar,color=preferencia_consumo))+
+  geom_point(size=5)+
+  theme_minimal()+
+  labs(title = "Relación entre consumo y precio dispuesto a pagar por café",
+       x = "Tazas al mes",
+       y = "Precio dispuesto a pagar",
+       color = "Preferencia de consumo")
+
+
+
 
 # Dividir datos en conjunto de entrenamiento y prueba (80/20)
 
-trainIndex <- createDataPartition(datos_simulados$precio_dispuesto_pagar, p = .8, list = FALSE, times = 1)
-datos_entrenamiento <- datos_simulados[trainIndex, ]
-datos_prueba <- datos_simulados[-trainIndex, ]
+trainIndex <- createDataPartition(nueva_muestra$precio_dispuesto_pagar, p = .8, list = FALSE, times = 1)
+datos_entrenamiento <- nueva_muestra[trainIndex, ]
+datos_prueba <- nueva_muestra[-trainIndex, ]
 
 # Entrenar el modelo de regresión lineal
 modelo <- train(
@@ -62,21 +93,21 @@ summary(modelo)
 # Realizar predicción en el conjunto de prueba
 predicciones <- predict(modelo, datos_prueba)
 
-# Calcular RMSE para medir el desempeño
-rmse <- RMSE(predicciones, datos_prueba$precio_dispuesto_pagar)
-cat("El modelo se desvía aproximadamente RMSE unidades del valor real en su predicción de la disposición a pagar: RMSE =", rmse, "\n")
-
 
 
 # Visualizar relación de tazas_mensuales y precio_dispuesto_pagar con preferencia_consumo
-ggplot(datos_simulados, aes(x = tazas_mensuales, y = precio_dispuesto_pagar, color = preferencia_consumo)) +
-  geom_point() +
+g1<-ggplot(datos_prueba, aes(x = tazas_mensuales, y = precio_dispuesto_pagar)) +
+  geom_point(aes(color=preferencia_consumo),size=3) +
   geom_smooth(method = "lm") +
   labs(title = "Relación entre Consumo y Precio Dispuesto a Pagar por Café",
        x = "Tazas al Mes",
        y = "Precio Dispuesto a Pagar",
        color = "Preferencia de Consumo") +
   theme_minimal()
+
+
+plotly::ggplotly(g1)
+
 
 
 # Distribución de las predicciones
@@ -88,6 +119,17 @@ ggplot(data.frame(predicciones), aes(x = predicciones)) +
        x = "Predicción de Disposición a Pagar",
        y = "Densidad") +
   theme_minimal()
+
+
+summary(predicciones)
+
+
+
+shapiro.test(residuals(modelo))
+
+
+library(lmtest)
+bptest(modelo$finalModel)
 
 
 

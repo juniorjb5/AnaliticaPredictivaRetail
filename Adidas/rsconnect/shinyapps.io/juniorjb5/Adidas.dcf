@@ -5,7 +5,7 @@ account: juniorjb5
 server: shinyapps.io
 hostUrl: https://api.shinyapps.io/v1
 appId: 13228933
-bundleId: 9314518
+bundleId: 9321350
 url: https://juniorjb5.shinyapps.io/Adidas/
 version: 1
 asMultiple: FALSE

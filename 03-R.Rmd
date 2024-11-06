@@ -87,20 +87,9 @@ class: center, middle
 
 
 ---
-background-image: url(images/back3.jpg)
-background-size: cover
-
-class: center, middle
-
-# `r icon("chart-pie")`
-# Basic Graphs
-----
 
 
-
----
-
-# `r icon("chart-pie")`  Basic Graphs
+# `r icon("chart-pie")`  Gráficos básicos
 
 .left-column[
 Un gráfico básico aunque puede ser muy informativo de manera clara y concisa, la estética *(Ej: Color, Relleno (Fill), Labels, Size, Axes, ...)* 💅 hace que su lectura no sea agradable.
@@ -128,7 +117,7 @@ barplot(y, xlab = "Softwares", col = "white",
 
 
 
-# `r icon("chart-pie")`  Basic Graphs
+# `r icon("chart-pie")`  Gráficos básicos
 
 .left-column[
 Un gráfico básico aunque puede ser muy informativo de manera clara y concisa, la estética *(Ej: Color, Relleno (Fill), Labels, Size, Axes, ...)* 💅 hace que su lectura no sea agradable.
@@ -170,33 +159,6 @@ class: inverse, center, middle
 
 ---
 
-# Estética
-
-.left-column[
-
-## Dícese de .... `r icon("glasses")`
-
-![](https://media.giphy.com/media/LTYT5GTIiAMBa/giphy.gif?cid=ecf05e474eh4j630guuedkpr6o39pg8nrur134aqur14r66i&ep=v1_gifs_search&rid=giphy.gif)
-
-]
-
-
-.right-column[
-
-La estética (del griego αἰσθητική [aisthetikê], ‘sensación’, ‘percepción’, y este de[aísthesis], ‘sensación’, ‘sensibilidad’, e -ικά [-icá], ‘relativo a’) es la rama de la filosofía que estudia la esencia y la percepción de la belleza y el arte.
-
-
-Algunos autores definen la estética de manera más amplia, como el estudio de las experiencias estéticas y los juicios estéticos en general, y no solo los relativos a la belleza. Cuando juzgamos algo como «bello», «feo», «sublime» o «elegante» (por dar algunos ejemplos), estamos haciendo juicios estéticos, que a su vez expresan experiencias estéticas. La estética es el dominio de la filosofía, estudiando el arte y cualidades como la belleza; asimismo es el estudio de estas experiencias y juicios que suceden día a día en las actividades que realizamos, produciendo sensaciones y emociones ya sean positivas o negativas en nuestra persona. La estética busca el por qué de algunas cuestiones, por ejemplo, por qué algún objeto, pintura o escultura no resulta atractivo para los espectadores; por lo tanto el arte lleva relación a la estética ya que busca generar sensaciones a través de una expresión............ 🥱🥱🥱🥱🥱🥱🥱🥱🥱🥱🥱
-
-
-----
-.right[
-Tomado de [Wikipedia](https://es.wikipedia.org/wiki/Est%C3%A9tica)
-]
-]
-
-
----
 
 class: center, middle
 
@@ -222,62 +184,9 @@ class: center, middle
 
 ---
 
-background-image: url(images/back3.jpg)
-background-size: cover
-
-class: center, middle
-
-# `r icon("chart-bar")`
-# Good Graphs
-----
 
 
-
-
----
-
-# `r icon("chart-bar")` Good Graphs
-
-
-.pull-left[
-
-
-### ggplot2
-
-> Es una de las librerías de la colección de tidyverse. `ggplot2 es un sistema para crear gráficos de forma declarativa, basado en The Grammar of Graphics . Usted proporciona los datos, le dice a ggplot2 cómo asignar variables a la estética, qué geometrías gráficas usar y se encarga de los detalles.`
-
-.center[
-<img src="https://soka.gitlab.io/blog/post/2019-04-25-r-ggplot2-scatterplot/images/ggplot_hex.jpg" 
-width="150px"/>
-]
-
-]
-
-.pull-right[
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE}
-library(ggplot2)
-
-# Create data
-data <- data.frame(
-  name=c("A","B","C","D","E") ,  
-  value=c(3,12,5,18,45)
-  )
-
-# Barplot
-ggplot(data, aes(x=name, y=value)) + 
-  geom_bar(stat = "identity")
-```
-
-
-
-]
-
-
----
-
-# `r icon("chart-bar")` Good Graphs
+# `r icon("chart-bar")` Buenos gráficos
 
 
 
@@ -295,7 +204,7 @@ gridExtra::grid.arrange(p1,p2,p3,p4,nrow=2, ncol=2)
 
 ---
 
-# `r icon("chart-bar")` Good Graphs
+# `r icon("chart-bar")` Buenos gráficos
 
 .pull-left[
 
@@ -381,7 +290,7 @@ p
 
 ---
 
-# `r icon("chart-bar")` Good Graphs
+# `r icon("chart-bar")` Buenos gráficos
 
 ### Maps in R
 
@@ -471,62 +380,6 @@ demoFreq %>%
 
 ---
 
-class: center, middle
-
-#  `r icon("chart-bar")` 
-# Gráficos interactivos
-----
-
-
-
----
-
-#  `r icon("chart-bar")` Gráficos interactivos
-
-
-
-.pull-left[
-
-
-### plotly
-
-> La biblioteca de gráficos R de Plotly crea gráficos interactivos con calidad de publicación (También proporciona librerías para Python). `Las bibliotecas de gráficos de código abierto de Plotly son de uso gratuito, funcionan sin conexión y no requieren ningún registro de cuenta. Plotly también tiene ofertas comerciales, como Dash Enterprise y Chart Studio Enterprise.` 
-
-
-.center[
-<img src="https://upload.wikimedia.org/wikipedia/commons/thumb/8/8a/Plotly_logo_for_digital_final_%286%29.png/330px-Plotly_logo_for_digital_final_%286%29.png" 
-width="150px"/>
-]
-
-]
-
-.pull-right[
-
-
-
-```{r echo=FALSE, message=FALSE, warning=FALSE }
-
-library(plotly)
-# volcano is a numeric matrix that ships with R
-fig.3d <- plot_ly(z = ~volcano)
-fig.3d <- fig.3d %>% add_surface()
-
-htmltools::save_html(fig.3d, file="images/fig.3d.html")
-
-```
-
-.center[
-<iframe src="images/fig.3d.html" allowtransparency="true" height="450" width="1100" scrolling="yes" style="border: none;" data-external="1"></iframe>
-]
-
-
-]
-
-
-
----
-
-
 
 
 #  `r icon("chart-bar")` Gráficos interactivos
@@ -571,88 +424,6 @@ htmltools::save_html(fig.map, file="images/fig.map.html")
 
 
 
-
-
----
-
-
-#  `r icon("chart-bar")` Gráficos interactivos
-
-### Gráficos descriptivos (Barras)
-
-```{r echo=FALSE, message=FALSE, warning=FALSE }
-library(plotly)
-
-Animals <- c("Jirafas", "Leones", "Micos")
-SF_Zoo <- c(20, 14, 23)
-LA_Zoo <- c(12, 18, 29)
-data <- data.frame(Animals, SF_Zoo, LA_Zoo)
-
-fig.bar <- plot_ly(data, x = ~Animals, y = ~SF_Zoo, type = 'bar', name = 'Marca Y')
-fig.bar <- fig.bar %>% add_trace(y = ~LA_Zoo, name = 'Marca X')
-fig.bar <- fig.bar %>% layout(yaxis = list(title = 'Conteo'), barmode = 'group')
-
-htmltools::save_html(fig.bar, file="images/fig.bar.html")
-```
-
-
-.center[
-<iframe src="images/fig.bar.html" allowtransparency="true" height="450" width="1100" scrolling="yes" style="border: none;" data-external="1"></iframe>
-]
-
-
----
-
-#  `r icon("chart-bar")` Gráficos interactivos
-
-### Gráficos descriptivos (Pie)
-
-```{r echo=FALSE, message=FALSE, warning=FALSE }
-# Load ggplot2
-library(plotly)
-
-USPersonalExpenditure <- data.frame("Categorias"=rownames(USPersonalExpenditure), USPersonalExpenditure)
-data <- USPersonalExpenditure[,c('Categorias', 'X1960')]
-
-fig_pie <- plot_ly(data, labels = ~Categorias, values = ~X1960, type = 'pie')
-fig_pie <- fig_pie %>% layout(title = 'Gastos Personales en el Sector Retail por Categoría en EE. UU. en 1960',
-         xaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE),
-         yaxis = list(showgrid = FALSE, zeroline = FALSE, showticklabels = FALSE))
-
-
-htmltools::save_html(fig_pie, file="images/fig_pie.html")
-
-```
-
-
-.center[
-<iframe src="images/fig_pie.html" allowtransparency="true" height="450" width="1100" scrolling="yes" seamless="seamless" frameBorder="0" data-external="1"> </iframe>
-]
-
-
----
-
-
-#  `r icon("chart-bar")` Gráficos interactivos
-
-### Gráficos descriptivos (Línea)
-
-Serie histórica de rentabilidad
-
-```{r echo=FALSE, message=FALSE, warning=FALSE }
-library(plotly)
-today <- Sys.Date()
-tm <- seq(0, 600, by = 10)
-Fecha <- today - tm
-Rentabilidad <- rnorm(length(Fecha),5,3)
-fig.series <- plot_ly(x = ~Fecha, y = ~Rentabilidad, mode = 'lines')
-
-htmltools::save_html(fig.series, file="images/fig.series.html")
-```
-
-.center[
-<iframe src="images/fig.series.html" allowtransparency="true" height="450" width="1100" scrolling="yes" seamless="seamless" frameBorder="0" data-external="1"> </iframe>
-]
 
 
 ---
